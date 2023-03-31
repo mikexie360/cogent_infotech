@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class HelloWorld {
+	public static void main(String[] args){
+//		
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Please enter the day between 1 to 7");
+//		
+//		day =sc.nextInt();
+//		String f="Mike";
+//		f = f.concat(f);
+//		System.out.println(f);
+		
+		
+		String mystr = args[0];
+		
+		mystr = mystr.toUpperCase();
+		
+		
+		
+		System.out.println(mystr);
+		mystrBuilder.reverse();
+		
+		System.out.println();
+		
+		
+	}
+	
+	
+	// write a program to list all even numbers less than or equal to the number n. take the value n as input from user.
+	public static void DayOneOne(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter a number greater than 1");
+		
+		int n = sc.nextInt();
+		
+		for (int i = 1; i <= n; i++){
+			if (i%2 == 0){
+				System.out.println(i);
+			}
+		}
+		
+	}
+}

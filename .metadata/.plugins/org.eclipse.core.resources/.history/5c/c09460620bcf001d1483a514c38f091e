@@ -1,0 +1,6 @@
+package Two;
+import java.util.*;
+
+public class Student {
+	private HashMap<Integer,String> empNames;
+}

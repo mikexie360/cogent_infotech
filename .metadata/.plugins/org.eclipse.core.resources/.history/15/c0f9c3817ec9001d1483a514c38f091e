@@ -1,0 +1,22 @@
+package inheritance;
+
+class A{
+	int a;
+	public A(int a) {
+		this.a = 0;
+	}
+}
+
+class B extends A{
+	public B(int a, int b) {
+		super(a);
+	}
+}
+
+public class SuperDemo {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

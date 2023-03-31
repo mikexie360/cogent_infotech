@@ -1,0 +1,29 @@
+package Seven;
+import java.util.ArrayList;
+
+public class Student {
+	private ArrayList<String> names;
+
+	public Student() {
+		names = new ArrayList<String>();
+	}
+	public void setName(String name) {
+		names.add(name);
+	}
+	public void searchName(String name) {
+		if (names.contains(name)) {
+			System.out.println(name +"Student exists");
+		} else {
+			System.out.println(name +"Student does not exist");
+		}
+	}
+	public void searchName(int n) {
+		System.out.println(names.get(n));
+	}
+	public void printNames() {
+		System.out.println(names);
+	}
+	public void removeName(String stuName) {
+		names.remove(stuName);
+	}
+}

@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+
+public class SP2023_SharesInvestment_marmion {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in); //this is for the user input
+		
+		String name;
+		int shares;
+		float purchasePrice;
+		float salePrice;
+		System.out.println("Enter your name:");
+		name = sc.next();
+		System.out.println("Enter the number of shares you want to invest:");
+		shares = sc.nextInt();
+		System.out.println("Enter the purchase price of each share:");
+		purchasePrice = sc.nextFloat();
+		System.out.println("Enter the sale price of one share:");
+		salePrice = sc.nextFloat();
+
+		float purchaseShares = purchasePrice * shares;
+		float commissionFee = purchaseShares * 0.02f;
+		float totalInvested = purchaseShares + commissionFee;
+
+		float saleShares = salePrice * shares;
+		commissionFee = saleShares * 0.02f;
+		float totalReturned = saleShares - commissionFee;
+
+		float profit = totalReturned - totalInvested;
+
+		System.out.printf("File: SP2023_ShareInvestment_Marmion.java\n");
+		System.out.printf("Spring 2023 semester – ZACH MARMION\n");
+		System.out.printf("-----------------------------------------------\n");
+		System.out.printf("Name of Investor: %+10s\n", name);
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+package Sorting;
+
+import java.util.*;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set<Employee> set = new TreeSet<>();
+		
+		set.add(new Employee(100,"Obama"));
+		
+		set.add(new Employee(400,"Tom"));
+		
+		set.add(new Employee(300,"Gyanendra"));
+		
+		set.add(new Employee(400,"Rambo"));
+		
+	}
+
+}

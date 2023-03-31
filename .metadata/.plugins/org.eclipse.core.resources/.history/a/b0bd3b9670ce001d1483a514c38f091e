@@ -1,0 +1,16 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class BookManagement {
+	List<Book> books;
+	BookManagement(){
+		books = new ArrayList<Book>();
+	}
+	
+	public void create();
+	public void find();
+	public void update();
+	public void delete();
+	public void print();
+	
+}

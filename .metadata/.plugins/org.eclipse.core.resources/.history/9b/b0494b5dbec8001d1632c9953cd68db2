@@ -1,0 +1,17 @@
+package inheritance;
+
+public class Colleagues extends Person{
+	public Colleagues (String personName) {
+		super(personName);
+	}
+	
+	@Override
+	public void behavior() {
+		System.out.println("Has more respect");
+	}
+	
+	@Override
+	public void likes() {
+		System.out.println("Professional");
+	}
+}

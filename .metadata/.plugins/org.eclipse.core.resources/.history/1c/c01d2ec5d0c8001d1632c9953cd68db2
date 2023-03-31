@@ -1,0 +1,33 @@
+package Book;
+
+
+
+
+public class BookDAO {
+	public void create(Book book[], int i) {
+		Book b = new Book();
+		book[i] = b;
+		System.out.println("Please enter the person ID:");
+		book[i].setPersonID(sc.nextInt());
+		System.out.println("Please enter the person name:");
+		person[i].setPersonName(sc.next());
+		System.out.println("Please enter the person address:");
+		person[i].setPersonAddress(sc.next());
+
+	}
+	public void read(Person person[]) {
+		for(Person p:person) {
+			System.out.println("Person ID is: "+ p.getPersonID());
+			System.out.println("Person Name is: "+ p.getPersonName());
+			System.out.println("Person Address is: "+ p.getPersonAddress());
+
+
+		}
+	}
+	public void update() {
+		
+	}
+	public void delete() {
+		
+	}
+}

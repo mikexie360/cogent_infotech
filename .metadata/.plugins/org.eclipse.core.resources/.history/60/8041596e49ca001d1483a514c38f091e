@@ -1,0 +1,5 @@
+import java.util.Scanner;
+
+public class ProductDAO{
+	Scanner sc = new Scanner(new)
+}

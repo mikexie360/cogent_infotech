@@ -1,0 +1,26 @@
+package esg.itp.shape;
+
+public class Square implements Polygon {
+
+	float side;
+	
+	public Square(float s) {
+		this.side = s;
+	}
+	
+	public void calcArea() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void calcPeri() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void display() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

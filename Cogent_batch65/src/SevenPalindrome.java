@@ -1,0 +1,32 @@
+
+import java.util.Scanner;
+
+public class SevenPalindrome {
+	public static void main(String[] args){
+		SevenPalindrome(args[0]);
+	}
+	public static void SevenPalindrome(String s) {
+		String mystr = s;
+		// to uppercase
+		mystr = mystr.toUpperCase();
+		
+		System.out.println(mystr);
+		// use stringBuilder
+		StringBuilder strbuilder = new StringBuilder();
+		strbuilder.append(mystr);
+		
+		// reverse
+		strbuilder.reverse();
+		
+		// Print
+		System.out.println(strbuilder);
+		if(mystr.equals(strbuilder.toString())){
+			System.out.println("Palindrome");
+		} else {
+			System.out.println("Not Palindrome");
+		}
+		int g = 4;
+		System.out.println(++g *8);
+	}
+
+}

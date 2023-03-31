@@ -1,0 +1,26 @@
+package pkg;
+
+import java.util.Scanner;
+
+public class BookMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int userInput = 0;
+		do {
+			
+			System.out.println("--Book Menu--");
+			System.out.println("0->Exit");
+			System.out.println("1->Create Books");
+			System.out.println("2->Show Books");
+			
+			userInput = sc.nextInt();
+
+			
+		}while(userInput != 0);
+		
+		
+	}
+
+}

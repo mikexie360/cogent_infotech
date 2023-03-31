@@ -1,0 +1,26 @@
+
+public class Emp {
+	int empId;
+	String empName;
+	String designation;
+	double basic;
+	final double hra = 0;
+	
+	
+	public void printDet() {
+		
+	}
+	public void calculateHRA() {
+		
+	}
+	public void printDET() {
+		System.out.println("Employee ID: " + empId);
+		System.out.println("Employee Name: " + empName);
+		System.out.println("Designation: " + designation);
+		System.out.println("Basic: " + basic);
+		System.out.println("HRA: " + hra);
+	}
+	public void calculateHRA() {
+		
+	}
+}

@@ -1,0 +1,121 @@
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.*;
+
+public class EmployeeDAO implements EmployeeDAOInterface {
+	private Scanner sc = new Scanner(System.in);
+	private int employeeNo;
+	private String employeeName;
+	private String employeeAddress;
+	private String employeeEmail;
+	float employeeSalary;
+	public void create(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+		while (true) {
+		try {
+			System.out.println("Enter the employee Number");
+			int empNo = sc.nextInt();
+			System.out.println("Enter the employee Name");
+			String empName = sc.next();
+			System.out.println("Enter the employee Address");
+			String empAddress = sc.next();
+			System.out.println("Enter the employee Email");
+			String empEmail = sc.next();
+			System.out.println("Enter the employee Salary");
+			float empSalary = sc.nextFloat();
+			Employee newe = new Employee(empNo, empName, empAddress, empEmail, empSalary);
+			e.add(newe);
+			break;
+		} catch(Exception exept) {
+			continue;
+		}
+		}
+	}
+
+	public void update(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the Employee Number to update");
+		int oldNumber = sc.nextInt();
+		// find the employee
+		int index = -1;
+		for (int i =0; i < e.size();i++ ) {
+			if (e.get(i).getEmployeeNo() == oldNumber) {
+				index = i;
+			}
+		}
+		
+		if (index == -1) {
+			System.out.println("That Employee does not exist");
+			return;
+		}
+		System.out.println("Enter the employee New Number");
+		int empNo = sc.nextInt();
+		System.out.println("Enter the employee Name");
+		String empName = sc.next();
+		System.out.println("Enter the employee Address");
+		String empAddress = sc.next();
+		System.out.println("Enter the employee Email");
+		String empEmail = sc.next();
+		System.out.println("Enter the employee Salary");
+		float empSalary = sc.nextFloat();
+		Employee newe = new Employee(empNo, empName, empAddress, empEmail, empSalary);
+		e.set(index, newe);
+		
+	}
+
+	public void delete(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the Employee Number to delete");
+		int oldNumber = sc.nextInt();
+		// find the employee
+		int index = -1;
+		for (int i =0; i < e.size();i++ ) {
+			if (e.get(i).getEmployeeNo() == oldNumber) {
+				index = i;
+			}
+		}
+		
+		if (index == -1) {
+			System.out.println("That Employee does not exist");
+			return;
+		}
+		e.remove(index);
+	}
+
+	public void readAll(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+		System.out.println();
+		for (Employee obj: e) {
+			System.out.println(obj);
+		}
+	}
+
+	public void searchEmployee(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter employee Number to search");
+		int No = sc.nextInt();
+		
+		int index = -1;
+		for (int i =0; i < e.size();i++ ) {
+			if (e.get(i).getEmployeeNo() == No) {
+				index = i;
+			}
+		}
+		
+		if (index == -1) {
+			System.out.println("That Employee does not exist");
+			return;
+		}
+		System.out.println(e.get(index).toString());
+	}
+	
+	public void empSort(ArrayList<Employee> e) {
+		e.sort(new EmployeeNameComparator());
+	}
+	
+	
+	
+
+
+}

@@ -1,0 +1,24 @@
+package pkg;
+
+import java.util.Scanner;
+
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String input = args[0];
+		System.out.println("Input is: " + input);
+		int output = Integer.parseInt(input);
+		System.out.println("Output is: " + output);
+		
+		try {
+			
+		} catch (ArrayIndexOutOfBoundsException e){
+		} catch (NumberFormatException e) {
+			
+		}
+		
+	}
+
+}

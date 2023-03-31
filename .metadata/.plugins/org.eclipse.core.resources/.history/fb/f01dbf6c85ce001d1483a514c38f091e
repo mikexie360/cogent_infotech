@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class SP2023_AdultBMI_Calculator_DriverClass_Marmion {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in); //this is for the user input
+		
+		// declaring the object
+		SP2023_Adult_marmion bmi = null;
+		
+		String name;
+		int height;
+		int weight;
+		//Allow user to enter info
+		System.out.println("Enter your name:");
+		name = sc.next();
+		System.out.println("Enter your height in inches:");
+		height = sc.nextInt();
+		System.out.println("Enter your weight in pounds:");
+		weight = sc.nextInt();
+		
+		
+		// calling the paramerterized constructor
+		bmi = new SP2023_Adult_marmion(name,height,weight);
+
+		// call the toString() method
+		System.out.println(bmi.toString());
+		//bmi.toString();
+	}
+
+}

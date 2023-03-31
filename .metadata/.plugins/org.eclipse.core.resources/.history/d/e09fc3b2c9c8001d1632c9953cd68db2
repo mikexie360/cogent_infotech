@@ -1,0 +1,21 @@
+package polymorphism;
+
+public class Tablet extends Medicine{
+
+	public Tablet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Tablet(String drug, String companyName, String companyAddress) {
+		super(drug, companyName, companyAddress);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void displayLabel() {
+		System.out.println("Company Name: "+ companyName);
+		System.out.println("Company Address: "+ companyAddress);
+		System.out.println("Store in a cool dry place");
+	}
+}

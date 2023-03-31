@@ -1,0 +1,21 @@
+package pkg;
+
+interface MyInterface {
+	public void product(int x);
+}
+
+
+
+public class Application {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyInterface m1 =(int a, int b)->{ 
+			System.out.println(s*s);
+		};
+		
+		m1.product(5);
+	
+	}
+
+}

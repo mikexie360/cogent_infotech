@@ -1,0 +1,24 @@
+package pkg;
+
+interface myInterface{
+	public static void m1() {
+		System.out.println("This is static method");
+	}
+}
+
+
+public class Main implements myInterface{
+
+	@Override
+	public static void m1() {
+		System.out.println("Inside Main");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		myInterface.m1(); // valid
+		m1(); // invalid
+		Main m = new Main();
+		m.m1(); // invalid
+	}
+
+}

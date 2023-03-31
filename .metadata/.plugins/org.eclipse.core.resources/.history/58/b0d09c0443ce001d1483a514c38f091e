@@ -1,0 +1,31 @@
+package Four;
+
+public class FourMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Storage st = new Storage(0);
+		Counter ct = new Counter(st);
+		Printer pt = new Printer(st);
+		
+		try {
+			ct.start();
+			ct.wait();
+			pt.start();
+			pt.wait();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		for(int i = st.storedInt; i<100; i++) {
+			synchronized (ct) {
+				ct.notify();
+				pt.notify();
+			}
+			
+		}
+		
+	}
+
+}

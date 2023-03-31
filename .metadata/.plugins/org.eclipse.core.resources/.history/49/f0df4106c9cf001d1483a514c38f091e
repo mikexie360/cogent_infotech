@@ -1,0 +1,51 @@
+
+import java.util.Scanner;
+import java.util.ArrayList;
+public class EmployeeDAO implements EmployeeDAOInterface {
+	Scanner sc = new Scanner(System.in);
+	int employeeNo;
+	String employeeName;
+	String employeeAddress;
+	String employeeEmail;
+	float employeeSalary;
+	public void create(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the employee Number");
+		int empNo = sc.nextInt();
+		System.out.println("Enter the employee Name");
+		String empName = sc.next();
+		System.out.println("Enter the employee Address");
+		String empAddress = sc.next();
+		System.out.println("Enter the employee Email");
+		String empEmail = sc.next();
+		System.out.println("Enter the employee Salary");
+		float empSalary = sc.nextFloat();
+		Employee newe = new Employee(empNo, empName, empAddress, empEmail, empSalary);
+		e.add(newe);
+	}
+
+	@Override
+	public void update(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void readAll(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void searchEmployee(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

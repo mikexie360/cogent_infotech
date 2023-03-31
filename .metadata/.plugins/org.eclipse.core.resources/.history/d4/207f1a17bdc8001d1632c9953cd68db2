@@ -1,0 +1,7 @@
+package inheritance;
+
+public class Children extends Parent{
+	public void behavior() {
+		System.out.println("More love");
+	}
+}

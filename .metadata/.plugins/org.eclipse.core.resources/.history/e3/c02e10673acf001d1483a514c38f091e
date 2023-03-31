@@ -1,0 +1,15 @@
+package pkg;
+
+import java.util.Arrays;
+import java.util.*;
+
+public class PredicateTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> names = Arrays.asList("Tech","Cogent", "Infotech","Tutorial","Tom","Tina","Amit");
+	
+	
+	}
+
+}

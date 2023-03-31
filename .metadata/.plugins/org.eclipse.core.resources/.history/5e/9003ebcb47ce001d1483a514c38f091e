@@ -1,0 +1,25 @@
+package Four;
+
+public class Counter extends Thread{
+	int store;
+	
+	public Counter(int store) {
+		System.out.println("Creating Counter");
+		this.store = store;
+	}
+	
+	public synchronized void update(int i) {
+		store = i;
+	}
+	
+	@Override
+	public void run() {
+		synchronized (this) {
+			for ( int i = 0; i<100; i++) {
+				store +=1;
+				System.out.println("Counter:\t"+store);
+				this.notify();
+			}
+		}
+	}
+}

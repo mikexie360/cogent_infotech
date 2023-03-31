@@ -1,0 +1,15 @@
+package pkg;
+
+public class WrapperDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x = 100; // primitive
+		
+		x = new Integer(x);
+		Integer y = Integer.valueOf(x);
+		
+		System.out.println(Integer.valueOf(y));
+	}
+
+}

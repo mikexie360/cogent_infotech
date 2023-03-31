@@ -1,0 +1,7 @@
+
+public class SportsCar extends Car{
+	SportsCar() {
+		super(noOfGear, noOfGear);
+	}
+
+}

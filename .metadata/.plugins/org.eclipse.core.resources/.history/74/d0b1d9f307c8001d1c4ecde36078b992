@@ -1,0 +1,33 @@
+public class EightBingo {
+	public static void main(String[] args){
+
+		Bingo(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
+	}
+	public static void Bingo(int first, int second){
+
+		int inARow = 0;
+		int[] bingoBoard = new int[5];
+		bingoBoard[0] = 3;
+		bingoBoard[1] = 29;
+		bingoBoard[2] = 30;
+		bingoBoard[3] = 39;
+		bingoBoard[4] = 40;
+		
+		System.out.println("Your first number was " + first + "\n");
+		System.out.println("Your second number was " + second + "\n");
+		for (int i = 0; i<bingoBoard.length; i++){
+			if (bingoBoard[i] == first){
+				inARow = inARow + 1;
+			}
+			if (bingoBoard[i] == second){
+				inARow = inARow + 1;
+			}
+		}
+		if (inARow >= 2){
+			System.out.println("Its Bingo! //// This message if "+ first+ " and " + second +" is found in the array");
+		}
+		else{
+			System.out.println("Not Bingo.");
+		}
+	}
+}

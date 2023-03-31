@@ -1,0 +1,27 @@
+package inheritance;
+
+class Parent{
+	int pAge =50;
+	public void display()
+	{
+		System.out.println("Parent age is: " + pAge);
+	}
+}
+
+class Child extends Parent{
+	int cAge = 25;
+	public void display() {
+		super.display();
+		System.out.println("Child age is: "+ cAge);
+	}
+}
+
+public class SuperDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Child c = new Child();
+		c.display();
+	}
+
+}

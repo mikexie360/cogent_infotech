@@ -1,0 +1,8 @@
+package Four;
+
+public class Counter extends Thread{
+	
+	public Counter() {
+		System.out.println("Creating Counter");
+	}
+}

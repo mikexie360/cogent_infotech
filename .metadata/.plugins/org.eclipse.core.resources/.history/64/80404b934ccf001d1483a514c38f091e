@@ -1,0 +1,95 @@
+//SP2023_Employee_marmion
+public class SP2023_Employee_Marmion {
+	// Class atributes
+	private String id;
+	private String name;
+	private float salary;
+	private int hours;
+	
+	// Constructors are methods with the same name as the class it belongs to
+	public SP2023_Employee_Marmion() {
+		this.id = "";
+		this.name = "";
+		// floats are decimal numbers.
+		// anything inside double quotation marks are considered Strings
+		// 0.0 is considered a double
+		// 0.0f is considered a float
+		// add a f to the end of a decimal number to make it a float
+		// don't add a f to the end of a decimal number to keep it a double
+		this.salary = 0.0f;
+		this.hours = 0;
+		
+	}
+	// paramerterized constructor
+	public SP2023_Employee_Marmion(String id, String name, float salary, int hours) {
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.hours = hours;
+	}
+	/*
+		double grossPay;
+		double netPay;
+		double federalTax;
+		double socialTax;
+		double medicareTax;
+		double federalTaxRate = 8.74;
+		double socialTaxRate = 6.20;
+		double medicareTaxRate = 1.45;
+		
+		grossPay = salary * hours;
+		federalTax = grossPay * federalTaxRate;
+		socialTax = grossPay * socialTaxRate;
+		medicareTax = grossPay * medicareTaxRate;
+		netPay = grossPay - (federalTax + socialTax + medicareTax);
+	*/
+	// methods
+	public double calculate_federalTax() {
+		double federalTaxRate = 8.74;
+		double grossPay = salary * hours;
+		double federalTax = grossPay * federalTaxRate;
+		return federalTax;
+	}
+	public double calculate_socialTax() {
+		double socialTaxRate = 6.20;
+		double grossPay = salary * hours;
+		double socialTax = grossPay * socialTaxRate;
+		return socialTax;
+	}
+	
+	public double calculate_medicareTax() {
+		double medicareTaxRate = 1.45;
+		double grossPay = salary * hours;
+		double medicareTax = grossPay * medicareTaxRate;
+		return medicareTax;
+	}
+	
+	public double calculate_netPay() {
+		double grossPay = salary * hours;
+		double netPay = grossPay - (calculate_federalTax() + calculate_socialTax() + calculate_medicareTax());
+		return netPay;
+	}
+
+	public String toString(){
+		System.out.printf("File: SP2023_BiWeekSalaryOfEmployee_Marmion.java\n");
+		System.out.printf("BIWEEKLY PAYMENT OF EMPLOYEE – ZACH MARMION\n");
+		System.out.printf("....................................................\n");
+		System.out.printf("Employee ID: %36s\n", id);
+		System.out.printf("Sale Employee Name: %29s\n", name);
+		System.out.printf("Hourly Salary: %34s\n", salary);
+		System.out.printf("Number of work hours in 2 weeks: %16s\n", hours);
+		System.out.printf("....................................................\n");
+		System.out.printf("Gross Pay: %38s\n", (salary * hours);
+		System.out.printf("Federal Income Tax (8.74): %22s\n", federalTax);
+		System.out.printf("Social Security Tax (6.20): %21s\n", socialTax);
+		System.out.printf("Medicare Tax (1.45): %28s\n", medicareTax);
+		System.out.printf("....................................................\n");
+		System.out.printf("Net Pay: %40s\n", netPay);
+		return "";
+	}
+
+
+
+
+
+}

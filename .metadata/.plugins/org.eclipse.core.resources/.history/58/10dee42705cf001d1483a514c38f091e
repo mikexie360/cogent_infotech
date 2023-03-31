@@ -1,0 +1,23 @@
+package Sorting;
+import java.util.*;
+public class EmployeeNameComparator implements Comparator<Employee>{
+	int id;
+	String name;
+	public EmployeeNameComparator(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	@Override
+	public int compare(EmployeeNameComparator o1,EmployeeNameComparator o2) {
+		String s1 = o1.name;
+		String s2 = o2.name;
+		return s1.compareTo(s2);
+	}
+	
+	public String toString() {
+		return name;
+	}
+	
+}

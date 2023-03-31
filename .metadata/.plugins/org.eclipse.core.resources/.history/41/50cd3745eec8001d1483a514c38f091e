@@ -1,0 +1,42 @@
+package Instrument;
+
+import java.util.Random;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Instrument[] inst = new Instrument[10];
+		
+		Random rand = new Random();
+		int r = 0;
+		for (int i = 0; i <inst.length;i++) {
+			r = rand.nextInt(3);
+			if (i == 0) {
+				inst[i] = new Piano();
+			}
+			if ( i ==1) {
+				inst[i] = new Flute();
+			}
+			if ( i == 2) {
+				inst[i] = new Guitar();
+			}
+		}
+		
+		for (int i = 0; i < inst.length; i++) {
+			if (inst[i] instanceof Piano) {
+				System.out.println("Piano");
+			}
+			if (inst[i] instanceof Flute) {
+				System.out.println("Flute");
+			}
+			if (inst[i] instanceof Guitar) {
+				System.out.println("Guitar");
+			}
+			inst[i].play();
+			System.out.println();
+		}
+		
+	}
+
+}

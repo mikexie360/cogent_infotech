@@ -1,0 +1,24 @@
+//SP2023_Employee_marmion
+public class SP2023_Employee_Marmion {
+	// Class atributes
+	private String id;
+	private String name;
+	private float salary;
+	private int hours;
+	
+	// Constructors are methods with the same name as the class it belongs to
+	public SP2023_Employee_Marmion() {
+		this.id = "";
+		
+		
+		
+		
+	}
+	
+	
+	//
+	
+	//
+	
+	
+}

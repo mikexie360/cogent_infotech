@@ -1,0 +1,81 @@
+package ExceptionHandling;
+import java.util.Scanner;
+public class CalcMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String userIn = "";
+		Number num = new Number(0,0);
+		
+		BankAccount bank = null;
+		
+		do {
+			System.out.println("-----------Menu-----------");
+			System.out.println("0-exit");
+			System.out.println("1-add");
+			System.out.println("2-sub");
+			System.out.println("3-mul");
+			System.out.println("4-div");
+			System.out.println("5-make a bank account");
+			System.out.println("6-deposit");
+			System.out.println("7-withdraw");
+			System.out.println("8-getBalance");
+						
+			switch(Integer.parseInt(sc.next())) {
+				case 0:
+					System.exit(0);
+					break;
+				case 1:
+					System.out.println("Enter two numbers to add");
+					num.setFirstNumber(Integer.parseInt(sc.next()));
+					num.setSecondNumber(Integer.parseInt(sc.next()));
+					num.add();
+					System.out.println("The sum is: "+num.getResult());
+					break;
+				case 2:
+					System.out.println("Enter two numbers to subtract");
+					num.setFirstNumber(Integer.parseInt(sc.next()));
+					num.setSecondNumber(Integer.parseInt(sc.next()));
+					num.sub();
+					System.out.println("The difference is: "+num.getResult());
+					break;
+				case 3:
+					System.out.println("Enter two numbers to multiply");
+					num.setFirstNumber(Integer.parseInt(sc.next()));
+					num.setSecondNumber(Integer.parseInt(sc.next()));
+					num.mul();
+					System.out.println("The product is: "+num.getResult());
+					break;
+				case 4:
+					System.out.println("Enter two numbers to divide");
+					num.setFirstNumber(Integer.parseInt(sc.next()));
+					num.setSecondNumber(Integer.parseInt(sc.next()));
+					try {
+						num.div();
+						System.out.println("The division is: "+num.getResult());
+					} catch (ArithmeticException e) {
+						e.printStackTrace();
+					}
+					break;
+				case 5:
+					System.out.println("Enter\n Bank Account Number\n Customer Name\n Account Type\n Balance");
+					try {
+						bank = new BankAccount(sc.nextInt(),sc.next(),sc.next(),sc.nextFloat());
+					} catch(LowBalanceException e) {
+						e.printStackTrace();
+					} catch(NegativeAmount e) {
+						e.printStackTrace();
+					}
+					break;
+				case 6:
+					break;
+				default:
+					break;
+			}
+			
+		} while(true);
+		
+	}
+
+}

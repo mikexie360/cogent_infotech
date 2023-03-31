@@ -1,0 +1,21 @@
+
+public class SportsCar extends Car{
+	
+	
+	
+	SportsCar(int speed, int noOfGear) {
+		super(speed, noOfGear);
+	}
+	
+	public void AirBalloonType() {
+		System.out.println("Speed " + speed);
+		System.out.println("noOfGear "+ noOfGear);	
+	}
+	
+	public void display() {
+		System.out.println("Speed " + speed);
+		System.out.println("noOfGear "+ noOfGear);
+	}
+	
+
+}

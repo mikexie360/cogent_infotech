@@ -1,0 +1,17 @@
+package pkg;
+
+public class WrapperDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x = 100; // primitive
+		
+		x = new Integer(x);
+		Integer y = new Integer(x); // boxing
+		int z = y.intValue(); // unboxing
+		byte a = 1;
+		String b =  Byte.toString(a); 
+		System.out.println(y);
+	}
+
+}

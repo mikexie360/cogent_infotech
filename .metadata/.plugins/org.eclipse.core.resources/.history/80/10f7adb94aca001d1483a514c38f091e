@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class ProductDAO{
+	Scanner sc = new Scanner(System.in);
+	public ProductDAO() {
+		
+	}
+	
+	public void create(Product[] pArr) {
+		
+		int index = -1;
+		// find the first empty slot in the array
+		for (int i = 0; i<pArr.length; i++) {
+			if(pArr[i] == null) {
+				index = i;
+				break;
+			}
+		}
+		
+		if (index == -1) {
+			System.out.println("The Product array is full 10/10!");
+			return;
+		}
+		
+		Product newProduct = new Product();
+		System.out.println("Enter a product ID to create: ");
+		newProduct.setId(sc.next());
+		System.out.println("Enter a product name: ");
+		newProduct.setName(sc.next());
+		System.out.println("Enter a product price: ");
+		newProduct.setPrice(sc.nextDouble());
+	}
+	
+	public void read(Product[] pArr, String id) {
+		
+	}
+	
+	public void update(Product[] pArr, String id) {
+		
+	}
+	
+	public void delete(Product[] pArr, String id) {
+		
+	}
+}

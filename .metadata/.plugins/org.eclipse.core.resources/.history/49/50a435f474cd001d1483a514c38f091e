@@ -1,0 +1,23 @@
+
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class ReaderAndWriterDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileReader fr = null;
+		FileWriter fw = null;
+		
+		try {
+			fr = new FileReader("c://streams//abc.txt");
+			fw = new FileWriter("c://streams//msg.txt");
+			
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+	}
+
+}

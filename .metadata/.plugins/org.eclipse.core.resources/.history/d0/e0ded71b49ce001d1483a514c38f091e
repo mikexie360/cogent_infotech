@@ -1,0 +1,26 @@
+package Four;
+
+public class Printer extends Thread{
+	int store;
+	Counter ct;
+	
+	public Printer(int store, Counter ct) {
+		System.out.println("Creating Printer");
+		this.store = store;
+		this.ct = ct;
+	}
+	
+	public void update(int i) {
+		store = i;
+	}
+	
+	@Override
+	public void run() {
+			for ( int i = 0; i < 10; i++) {
+				synchronized (this) {
+				System.out.println("Printer:\t"+ct.store);
+				this.notify();
+			}
+		}
+	}
+}

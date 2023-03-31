@@ -1,0 +1,11 @@
+
+public interface EmployeeDAOInterface {
+	
+	public void create(Employee e);
+	public void update(Employee e);
+	public void delete(Employee e);
+	public void readAll(Employee e);
+	public void searchEmployee(Employee e);
+
+
+}

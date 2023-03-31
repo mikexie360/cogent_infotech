@@ -1,0 +1,5 @@
+package Instrument;
+
+interface Instrument {
+	abstract void play();
+}

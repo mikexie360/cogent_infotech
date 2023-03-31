@@ -1,0 +1,17 @@
+package Four;
+
+public class FourMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Counter ct = new Counter(0);
+		Printer pt = new Printer(0,ct);
+		Storage st = new Storage(0,ct,pt);
+		
+		st.start();
+
+		
+		
+	}
+
+}

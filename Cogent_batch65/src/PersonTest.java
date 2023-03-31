@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+
+public class PersonTest {
+	public static void main(String[] args){
+		Person p1 = new Person();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		p1.setPersonID(sc.nextInt());
+		
+		
+		Person p2 = new Person(1002,"John","Smith",30,"washington");
+		p1.setPersonID(1001);
+		p1.setPersonFirstName("Mike");
+		p1.setPersonlastName("Xie");
+		p1.setPersonAge(35);
+		p1.setPersonAddress("New York");
+		
+		System.out.println("Person details: ");
+		System.out.println("Person id is: " +p1.getPersonID());
+		System.out.println("First name is: " +p1.getPersonFirstName());
+		System.out.println("Last name is: " +p1.getPersonlastName());
+		System.out.println("Age is: "+p1.getPersonAge());
+		System.out.println("Address is: "+p1.getPersonAddress());
+	
+		System.out.println("Person id is: " +p2.getPersonID());
+		System.out.println("First name is: " +p2.getPersonFirstName());
+		System.out.println("Last name is: " +p2.getPersonlastName());
+		System.out.println("Age is: "+p2.getPersonAge());
+		System.out.println("Address is: "+p2.getPersonAddress());
+	}
+}

@@ -1,0 +1,16 @@
+
+public class FileOutputStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileInputStream fis = null;
+		FileOutputStream fos = null;
+		
+		try {
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

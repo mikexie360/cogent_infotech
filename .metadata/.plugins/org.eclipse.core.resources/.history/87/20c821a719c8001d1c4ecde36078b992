@@ -1,0 +1,12 @@
+
+public class PersonTest {
+	public static void main(String[] args){
+		Person p1 = new Person();
+		
+		p1.setPersonID(1001);
+		p1.setPersonFirstName("Mike");
+		p1.setPersonlastName("Xie");
+		p1.setPersonAge(35);
+		p1.setPersonAddress("New York");
+	}
+}

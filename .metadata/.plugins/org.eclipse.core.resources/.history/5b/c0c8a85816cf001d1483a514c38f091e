@@ -1,0 +1,26 @@
+package Four;
+
+public class Student implements Comparable{
+
+	private int rollNo;
+	private String name;
+	
+	public Student() {
+		rollNo = 0;
+		name = "";
+	}
+	
+	public Student(int rollNo, String name) {
+		this.rollNo = rollNo;
+		this.name = name;
+	}
+	
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	
+}

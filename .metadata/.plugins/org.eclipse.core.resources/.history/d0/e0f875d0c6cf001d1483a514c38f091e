@@ -1,0 +1,9 @@
+
+public class Employee {
+	int employeeNo;
+	String employeeName;
+	String employeeAddress;
+	String employeeEmail;
+	float employeeSalary;
+	
+}

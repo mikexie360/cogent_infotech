@@ -1,0 +1,14 @@
+package pkg;
+
+public class Student {
+	int rollNo;
+	String className;
+	String name;
+	
+	// paramerterized constructor
+	public Student(int rollNo, String className, String name) {
+		this.rollNo = rollNo;
+		this.className = className;
+		this.name = name;
+	}
+}

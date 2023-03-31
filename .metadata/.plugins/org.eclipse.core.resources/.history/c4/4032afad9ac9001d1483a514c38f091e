@@ -1,0 +1,15 @@
+package pkg;
+
+import java.util.Scanner.*;
+
+public class BookArray extends Book{
+	Book[] books;
+	public BookArray(){
+		
+	}
+	
+	public void createBooks(int n) {
+		
+	}
+
+}

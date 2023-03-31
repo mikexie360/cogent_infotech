@@ -1,0 +1,36 @@
+
+import java.util.Scanner;
+
+public class EmployeeDAO implements EmployeeDAOInterface {
+	Scanner sc = new Scanner(System.in);
+	@Override
+	public void create(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Employee e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(Employee e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void readAll(Employee e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void searchEmployee(Employee e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

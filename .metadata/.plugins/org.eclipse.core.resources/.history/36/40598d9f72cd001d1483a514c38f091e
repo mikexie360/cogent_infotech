@@ -1,0 +1,19 @@
+import java.io.FileInputStream;
+
+public class FileOutputStreamDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileInputStream fis = null;
+		FileOutputStream fos = null;
+		
+		try {
+			fis = new FileInputStream("c://streams//abc.txt");
+			fos = new FileOutputStream("c://streams//xyz.txt");
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,39 @@
+package Two;
+import java.util.*;
+
+public class Student {
+	private HashMap<String,String> empNames;
+	Scanner sc = new Scanner(System.in);
+	
+	public void setNames() {
+		System.out.println("Enter roll number");
+		String rollno = sc.next();
+		System.out.println("Enter name to set");
+		String name = sc.next();
+		empNames.put(rollno, name);
+	}
+	public void printNames() {
+		Collection<String> names = empNames.values();
+		System.out.println("Print All Names:");
+		System.out.println(names);
+	}
+	public void getName(String key) {
+		System.out.println("Getting name" + empNames.get(key));
+	}
+	public void printNamesKeySet() {
+		Set<String> set = empNames.keySet();
+		Collection<String> names = empNames.values();
+		System.out.println("Print All Names:");
+		System.out.println(names);
+	}
+	
+	public void printSize() {
+		
+	}
+	public void remove(String key) {
+		
+	}
+	
+	
+	
+}

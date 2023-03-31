@@ -1,0 +1,58 @@
+//SP2023_Employee_marmion
+public class SP2023_Employee_Marmion {
+	// Class atributes
+	private String id;
+	private String name;
+	private float salary;
+	private int hours;
+	
+	// Constructors are methods with the same name as the class it belongs to
+	public SP2023_Employee_Marmion() {
+		this.id = "";
+		this.name = "";
+		// floats are decimal numbers.
+		// anything inside double quotation marks are considered Strings
+		// 0.0 is considered a double
+		// 0.0f is considered a float
+		// add a f to the end of a decimal number to make it a float
+		// don't add a f to the end of a decimal number to keep it a double
+		this.salary = 0.0f;
+		this.hours = 0;
+		
+	}
+	// paramerterized constructor
+	public SP2023_Employee_Marmion(String id, String name, float salary, int hours) {
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.hours = hours;
+	}
+	// methods
+	public double calculate_federalTax() {
+		
+		return 0.0;
+	}
+	public double calculate_socialTax() {
+		
+		return 0.0;
+	}
+	
+	public double calculate_medicareTax() {
+		
+		return 0.0;
+	}
+	
+	public double calculate_netPay() {
+		
+		return 0.0;
+	}
+
+	public String toString(){
+		return "";
+	}
+
+
+
+
+
+}

@@ -1,0 +1,12 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public interface BookManagement {
+	
+	public void create(List<Book> list);
+	public void find(ArrayList<Book> list);
+	public void update(ArrayList<Book> list);
+	public void delete(ArrayList<Book> list);
+	public void print(ArrayList<Book> list);
+	
+}

@@ -1,0 +1,15 @@
+package pkg;
+
+@FunctionalInterface
+interface StringCalc{
+	public int length(String s);
+}
+
+public class LengthString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

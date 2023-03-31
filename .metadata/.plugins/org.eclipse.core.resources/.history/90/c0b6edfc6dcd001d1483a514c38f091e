@@ -1,0 +1,13 @@
+import java.io.FileInputStream;
+public class FileInputStreamDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileInputStream fis = null;
+		fis = new FileInputStream(new File("c://streams//abc.txt"));
+		System.out.println("File is opened");
+
+	
+	}
+
+}

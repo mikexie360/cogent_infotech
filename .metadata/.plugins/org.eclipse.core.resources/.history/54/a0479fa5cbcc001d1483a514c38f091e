@@ -1,0 +1,29 @@
+package ExceptionHandling;
+
+public class Number {
+	int firstNumber;
+	int secondNumber;
+	double result;
+	
+	public Number(int x, int y) {
+		firstNumber = x;
+		secondNumber = y;
+	}
+	
+	public void add() {
+		result = firstNumber + secondNumber;
+	}
+	public void sub() {
+		result = firstNumber - secondNumber;
+	}
+	public void mul() {
+		result = firstNumber * secondNumber;
+	}
+	public void div() throws ArithmeticException {
+		try {
+			result = firstNumber / secondNumber;
+		} catch (ArithmeticException e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,6 @@
+package pkg;
+
+public class Student {
+	int rollNo;
+	String className;
+}

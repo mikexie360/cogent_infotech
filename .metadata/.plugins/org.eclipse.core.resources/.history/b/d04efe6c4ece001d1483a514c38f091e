@@ -1,0 +1,16 @@
+package Four;
+
+
+public class Printer extends Thread{
+	Storage store;
+	Printer(Storage store){
+		this.store = store;
+		new Thread(this, "Producer").start();
+	}
+	public void run() {
+		int i = 0;
+		while(true) {
+			store.printer(i++);
+		}
+	}
+}

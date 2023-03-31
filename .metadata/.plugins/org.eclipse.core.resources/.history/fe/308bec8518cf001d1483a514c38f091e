@@ -1,0 +1,9 @@
+package Four;
+
+import java.util.*;
+public class StudentNameComparator implements Comparator<Student>{
+
+	public int comparable(Student one, Student two) {
+		return one.name.compareTo(two.name);
+	}
+}

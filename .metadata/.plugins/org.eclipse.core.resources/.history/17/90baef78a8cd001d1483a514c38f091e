@@ -1,0 +1,11 @@
+package One;
+
+public class MyThread extends Thread{
+	public MyThread() {
+		super();
+	}
+	@Override
+	public void run() {
+		System.out.println("Hello World");
+	}
+}

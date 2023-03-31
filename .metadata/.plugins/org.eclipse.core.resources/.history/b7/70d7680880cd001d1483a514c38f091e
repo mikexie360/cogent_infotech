@@ -1,0 +1,17 @@
+package serialization;
+import java.io.*;
+public class SerializationDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileOutputStream fos;
+		ObjectOutputStream oos;
+		try {
+			fos = new FileOutputStream("c://streams//Emp.ser");
+			oos = new ObjectOutputStream(fos);
+		} catch(Exception e) {
+			
+		}
+	}
+
+}

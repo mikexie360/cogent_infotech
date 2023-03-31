@@ -1,0 +1,17 @@
+package Four;
+
+public class Counter extends Thread{
+	Storage store;
+	
+	public Counter(Storage store) {
+		System.out.println("Creating Counter");
+		this.store = store;
+	}
+	
+	@Override
+	public void run() {
+		synchronized (this){
+			
+		}
+	}
+}

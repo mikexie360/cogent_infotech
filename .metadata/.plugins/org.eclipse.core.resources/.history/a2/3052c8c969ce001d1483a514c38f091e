@@ -1,0 +1,6 @@
+package Seven;
+import java.util.ArrayList;
+
+public class Student {
+	private ArrayList<String> names;
+}

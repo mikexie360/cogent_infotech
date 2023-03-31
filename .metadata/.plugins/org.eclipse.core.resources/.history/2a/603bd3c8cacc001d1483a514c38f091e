@@ -1,0 +1,19 @@
+package ExceptionHandling;
+
+public class CalcAverage {
+	public CalcAverage() {
+		super();
+	}
+	
+	public double avgFirstN(int N) throws IllegalArgumentException {
+		if (N <1) {
+			throw new IllegalArgumentException();
+		}
+		
+		double sum = 0;
+		for (int  i =0; i <N ; i++) {
+			sum += i;
+		}
+		return sum/N;
+	}
+}

@@ -1,0 +1,13 @@
+package Seven;
+import java.util.ArrayList;
+
+public class Student {
+	private ArrayList<String> names;
+
+	public Student() {
+		names = new ArrayList<String>();
+	}
+	public void setName(String name) {
+		names.add(name);
+	}
+}

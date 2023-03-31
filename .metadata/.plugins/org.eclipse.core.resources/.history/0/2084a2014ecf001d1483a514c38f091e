@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+//SP2023_Adult_marmion
+public class SP2023_Adult_marmion {
+	private String name;
+	private int height;
+	private int weight;
+
+	// Constructors help classes create new objects
+
+	// default constructor
+	public SP2023_Adult_marmion() {
+		name = "";
+		height = 0;
+		weight = 0;
+	}
+
+	// parameterized constructor
+	public SP2023_Adult_marmion(String name, int height, int weight){
+		this.name = name;
+		this.height = height;
+		this.weight = weight;
+	}
+	
+	public double calculate_BMIRate() {
+		return ((double)weight * 703) / ((double)height * height);  //BMI calculation
+	}
+	
+	public String toString() {
+		/*
+		System.out.printf("-----------------------------------------------\n");
+		System.out.printf("File: SP2023_AdultBMI_Calculator_Marmion.java\n");
+		System.out.printf("Spring 2023 Semester – ZACH MARMION\n");
+		System.out.printf("Standard BMI:           18.5 - 24.9\n");
+		System.out.printf("-----------------------------------------------\n");
+		System.out.printf("User Name: %30s\n", name);
+		System.out.printf("Height (inches) %25s\n", height);
+		System.out.printf("Weight (pounds) %25s\n", weight);
+		System.out.printf("-----------------------------------------------\n");
+		System.out.printf("BMI: %36s\n", calculate_BMIRate());
+		*/
+		System.out.printf("-----------------------------------------------\n");
+		System.out.printf("File: SP2023_AdultBMI_Calculator_Marmion.java\n");
+		System.out.printf("Spring 2023 Semester – ZACH MARMION\n");
+		System.out.printf("Standard BMI:           18.5 - 24.9\n");
+		System.out.printf("-----------------------------------------------\n");
+		System.out.printf("User Name: %30s\n", name);
+		System.out.printf("Height (inches) %25s\n", height);
+		System.out.printf("Weight (pounds) %25s\n", weight);
+		System.out.printf("-----------------------------------------------\n");
+		System.out.printf("BMI: %36s\n", calculate_BMIRate());
+		return "";
+		// String result ="";
+		//result += firstline;
+		//result += secondline;
+		//...
+		//return result;
+	}
+
+	
+}

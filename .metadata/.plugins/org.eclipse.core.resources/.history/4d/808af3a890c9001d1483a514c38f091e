@@ -1,0 +1,20 @@
+package esg.itp.shape;
+
+public class Square implements Polygon {
+
+	public void calcArea() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void calcPeri() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void display() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

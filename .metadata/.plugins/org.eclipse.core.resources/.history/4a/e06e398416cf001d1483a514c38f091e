@@ -1,0 +1,40 @@
+package Four;
+
+public class Student implements Comparable{
+
+	private int rollNo;
+	private String name;
+	
+	public Student() {
+		rollNo = 0;
+		name = "";
+	}
+	
+	public Student(int rollNo, String name) {
+		this.rollNo = rollNo;
+		this.name = name;
+	}
+	
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		String name1 = this.name;
+		String name2 = o.name;
+		
+		if (id1<id2) {
+			return -1;
+		} else if (id1>id2) {
+			return 1;
+		} else {
+			return 0;
+		}
+		
+	}
+		return 0;
+	}
+	
+	
+	
+	
+	
+}

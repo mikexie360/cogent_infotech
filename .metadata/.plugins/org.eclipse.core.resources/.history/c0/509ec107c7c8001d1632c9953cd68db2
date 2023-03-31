@@ -1,0 +1,38 @@
+
+public class SportsCar extends Car{
+	
+	String AirBalloonType = "" ; 
+	
+	SportsCar(int speed, int noOfGear, String AirBalloonType) {
+		super(speed, noOfGear);
+		this.AirBalloonType = AirBalloonType;
+	}
+	
+	
+	
+	public String getAirBalloonType() {
+		return AirBalloonType;
+	}
+
+
+
+	public void setAirBalloonType(String airBalloonType) {
+		AirBalloonType = airBalloonType;
+	}
+
+
+	public void AirBalloonType() {
+		System.out.println("Speed " + speed);
+		System.out.println("noOfGear "+ noOfGear);
+		System.out.println("AirBalloonType "+ AirBalloonType);	
+
+	}
+	
+	@Override
+	public void display() {
+		System.out.println("Speed " + speed);
+		System.out.println("noOfGear "+ noOfGear);
+		System.out.println("AirBalloonType "+ AirBalloonType);	
+	}	
+
+}

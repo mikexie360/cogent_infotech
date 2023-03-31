@@ -1,0 +1,89 @@
+
+import java.util.Scanner;
+import java.util.ArrayList;
+public class EmployeeDAO implements EmployeeDAOInterface {
+	Scanner sc = new Scanner(System.in);
+	int employeeNo;
+	String employeeName;
+	String employeeAddress;
+	String employeeEmail;
+	float employeeSalary;
+	public void create(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the employee Number");
+		int empNo = sc.nextInt();
+		System.out.println("Enter the employee Name");
+		String empName = sc.next();
+		System.out.println("Enter the employee Address");
+		String empAddress = sc.next();
+		System.out.println("Enter the employee Email");
+		String empEmail = sc.next();
+		System.out.println("Enter the employee Salary");
+		float empSalary = sc.nextFloat();
+		Employee newe = new Employee(empNo, empName, empAddress, empEmail, empSalary);
+		e.add(newe);
+	}
+
+	public void update(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the Employee Number to update");
+		int oldNumber = sc.nextInt();
+		// find the employee
+		int index = -1;
+		for (int i =0; i < e.size();i++ ) {
+			if (e.get(i).getEmployeeNo() == oldNumber) {
+				index = i;
+			}
+		}
+		
+		if (index == -1) {
+			System.out.println("That Employee does not exist");
+			return;
+		}
+		System.out.println("Enter the employee New Number");
+		int empNo = sc.nextInt();
+		System.out.println("Enter the employee Name");
+		String empName = sc.next();
+		System.out.println("Enter the employee Address");
+		String empAddress = sc.next();
+		System.out.println("Enter the employee Email");
+		String empEmail = sc.next();
+		System.out.println("Enter the employee Salary");
+		float empSalary = sc.nextFloat();
+		Employee newe = new Employee(empNo, empName, empAddress, empEmail, empSalary);
+		e.set(index, newe);
+		
+	}
+
+	@Override
+	public void delete(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the Employee Number to delete");
+		int oldNumber = sc.nextInt();
+		// find the employee
+		int index = -1;
+		for (int i =0; i < e.size();i++ ) {
+			if (e.get(i).getEmployeeNo() == oldNumber) {
+				index = i;
+			}
+		}
+		
+		if (index == -1) {
+			System.out.println("That Employee does not exist");
+			return;
+		}
+	}
+
+	@Override
+	public void readAll(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void searchEmployee(ArrayList<Employee> e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

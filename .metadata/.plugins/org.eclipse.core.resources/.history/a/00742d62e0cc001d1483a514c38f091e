@@ -1,0 +1,30 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Emp emp=null;
+		try {
+			emp = new Emp(1,"mike","Manager",1000);
+			emp.printDET();
+		} catch (LowSalExpectation e) {
+			System.out.println("Low Salary Expectation\n");
+		}
+		
+		try {
+			emp = new Emp(1,"mike","Officer",1000);
+			emp.printDET();
+		} catch (LowSalExpectation e) {
+			System.out.println("Low Salary Expectation\n");
+		}
+		
+		try {
+			emp = new Emp(1,"mike","Clerk",100);
+			emp.printDET();
+		} catch (LowSalExpectation e) {
+			//System.out.println(e.toString());
+			System.out.println("Low Salary Expectation\n");
+		}
+	}
+
+}

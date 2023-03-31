@@ -1,0 +1,18 @@
+package pkg;
+
+interface myInterface{
+	public static void m1() {
+		System.out.println("This is static method");
+	}
+}
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		myInterface mi = new A();
+		mi.m4();
+	}
+
+}

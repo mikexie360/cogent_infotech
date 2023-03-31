@@ -1,0 +1,28 @@
+package esg.itp.shape;
+
+public class Rectangle extends Polygon {
+
+	float length;
+	float breadth;
+	
+	public Rectangle(int len, int bre) {
+		this.length = len;
+		this.breadth = bre;
+	}
+	
+	public void calcArea() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void calcPeri() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void display() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

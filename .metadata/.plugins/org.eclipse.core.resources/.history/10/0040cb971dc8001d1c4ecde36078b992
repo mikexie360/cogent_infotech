@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+
+public class Book {
+	int number;
+	String name;
+	double price;
+	String authorName;
+	
+	
+	
+	public Book() {
+		super();
+		this.number = B1004;
+		this.name = "Java jump start";
+		this.price = 10;
+		this.authorName = "John";
+	}
+
+	public Book(int number, String name, double price, String authorName) {
+		super();
+		this.number = number;
+		this.name = name;
+		this.price = price;
+		this.authorName = authorName;
+	}
+	
+	public void getUserInputScanner(){
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the book Number: ");
+		this.number = sc.nextInt();
+		this.name = sc.next();
+	}
+	
+	public int getNumber() {
+		return number;
+	}
+	public void setNumber(int number) {
+		this.number = number;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public String getAuthorName() {
+		return authorName;
+	}
+	public void setAuthorName(String authorName) {
+		this.authorName = authorName;
+	}
+	@Override
+	public String toString() {
+		return "Book [number=" + number + ", name=" + name + ", price=" + price
+				+ ", authorName=" + authorName + ", getNumber()=" + getNumber()
+				+ ", getName()=" + getName() + ", getPrice()=" + getPrice()
+				+ ", getAuthorName()=" + getAuthorName() + ", toString()="
+				+ super.toString() + "]";
+	}
+	
+	
+	
+	
+}

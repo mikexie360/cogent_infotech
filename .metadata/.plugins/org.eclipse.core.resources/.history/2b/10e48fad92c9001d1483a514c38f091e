@@ -1,0 +1,28 @@
+package esg.itp.shape;
+
+public class Square implements Polygon {
+	float area;
+	float perimter;
+	float side;
+	
+	public Square(float s) {
+		this.side = s;
+	}
+	
+	public void calcArea() {
+		// TODO Auto-generated method stub
+		area = this.side * this.side;
+	}
+
+	public void calcPeri() {
+		// TODO Auto-generated method stub
+		perimeter = this.side *4;
+	}
+
+	public void display() {
+		// TODO Auto-generated method stub
+		System.out.println("Area is: " + area);
+		System.out.println("Perimeter is: "+ perimeter);
+	}
+
+}

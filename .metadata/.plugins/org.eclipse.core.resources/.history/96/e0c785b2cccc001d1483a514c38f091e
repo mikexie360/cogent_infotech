@@ -1,0 +1,21 @@
+package ExceptionHandling;
+
+public class BankAccount {
+	int accNo;
+	String custName;
+	String accType;
+	float balance;
+	
+	public BankAccount(){
+		super();
+	}
+	
+	public void deposit(float amt) throws NegativeAmount{
+		if(amt < 0) {
+			throw new NegativeAmount("Deposit Amount is negative");
+		}
+		balance += amt;
+	}
+	
+	
+}

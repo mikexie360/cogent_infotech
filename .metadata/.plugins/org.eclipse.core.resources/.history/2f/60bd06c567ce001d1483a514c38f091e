@@ -1,0 +1,33 @@
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+public class ArrayListDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Integer> a1 = new ArrayList<Integer>();
+		a1.add(new Integer(20));
+		a1.add(new Integer(40));
+		a1.add(50); // AutoBoxing
+		
+		for(Object obj: a1) {
+			String str = obj.toString();
+			int a = Integer.parseInt(str);
+			System.out.print(a);
+		}
+		System.out.println("\n");
+		
+		Iterator<Integer> iter= a1.iterator();
+		
+		while(iter.hasNext()) {
+			System.out.print(iter.next());
+			iter.remove();
+		}
+		System.out.println("\n");
+		
+		System.out.println(a1);
+	}
+
+}

@@ -1,0 +1,22 @@
+package Set;
+
+import java.util.*;
+public class SetDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Random obj = new Random();
+		
+		Set<Integer> set = HashSet<E>(); 
+	
+	
+		set.add(100);
+		set.add(500);
+		set.add(140);
+		set.add(30);
+		set.add(100);
+		
+		System.out.println(set);
+	}
+
+}

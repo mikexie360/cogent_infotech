@@ -1,0 +1,14 @@
+package Multithreading;
+import java.util.*;
+public class JoinDemo extends Thread{
+
+	static int n,sum=0;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		long start = System.currentTimeMillis();
+		System.out.println("Sum of 'N' numbers: ");
+		System.out.println("Enter the value");
+		Scanner sc = new Scanner(System.in);
+	}
+
+}

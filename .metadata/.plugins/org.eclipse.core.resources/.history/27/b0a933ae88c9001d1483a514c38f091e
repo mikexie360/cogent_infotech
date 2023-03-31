@@ -1,0 +1,11 @@
+package pkg;
+
+public class ProductTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Product p = new Product();
+		System.out.println(p.pId);
+	}
+
+}

@@ -1,0 +1,22 @@
+package pkg;
+
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
+public class ConsumerTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Consumer<String> c =(x)->System.out.println(x.toLowerCase());
+		
+		
+		c.accept("COGENT INFOTECH");
+		Consumer<Predicate<String>> c1=(x)->{
+			System.out.println(x);
+		};
+		Predicate<String> p1=(s)->s.startsWith("T");
+		c1.accept("Cogent");
+	}
+
+}

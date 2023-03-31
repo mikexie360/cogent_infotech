@@ -1,0 +1,32 @@
+package esg.itp.shape;
+
+public class Rectangle implements Polygon {
+
+	float area;
+	float perimter;
+	
+	float length;
+	float breadth;
+	
+	public Rectangle(float len, float bre) {
+		this.length = len;
+		this.breadth = bre;
+	}
+	
+	public void calcArea() {
+		// TODO Auto-generated method stub
+		area = (this.breadth *this.length);
+	}
+
+	public void calcPeri() {
+		// TODO Auto-generated method stub
+		perimeter = (this.length *2) + (this.breadth*2);
+	}
+
+	public void display() {
+		// TODO Auto-generated method stub
+		System.out.println("Area is: " + area);
+		System.out.println("Perimeter is: "+ perimeter);
+	}
+
+}

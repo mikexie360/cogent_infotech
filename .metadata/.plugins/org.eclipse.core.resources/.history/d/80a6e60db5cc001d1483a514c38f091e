@@ -1,0 +1,18 @@
+package pkg;
+
+import java.util.Scanner;
+
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter two numbers:");
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		int z = x/y;
+		System.out.println("Welcome");
+		
+	}
+
+}

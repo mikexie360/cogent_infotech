@@ -1,0 +1,51 @@
+package serialization;
+
+import java.io.*;
+import java.util.Scanner;
+
+
+public class StreamBasedProgram {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		FileOutputStream fos;
+		ObjectOutputStream oos;
+		FileInputStream fis = null;
+		ObjectInputStream ois = null;
+		
+		do {
+			System.out.println("----------Menu----------");
+			System.out.println("0-exit");
+			try {
+				fis = new FileInputStream("c://streams//Student.ser");
+				ois = ObjectOutputStream(fos;
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			switch(sc.nextInt()) {
+			case 0: 
+				try {
+					fis.close();
+					ois.close();
+					fos.close();
+					oos.close();
+				} catch(Exception e) {
+					e.printStackTrace();
+				}
+				System.exit(0);
+				break;
+			case 1: // add student
+			}
+		} while(true);
+		
+		try {
+			fos = new FileOutputStream("c://streams//Emp.ser");
+			oos = new ObjectOutputStream(fos);
+			Employee emp = new Employee(1,"John",1000, 112);
+			oos.writeObject(emp);
+			System.out.println("Object Serialized");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

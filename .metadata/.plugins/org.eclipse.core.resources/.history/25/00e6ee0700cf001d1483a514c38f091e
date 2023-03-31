@@ -1,0 +1,11 @@
+package Map;
+
+import java.util.*;
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Map<String> map = new HashMap<>();
+	}
+
+}

@@ -1,0 +1,9 @@
+
+public class Emp {
+	int empId;
+	String empName;
+	String designation;
+	double basic;
+	final double hra = 0;
+	
+}

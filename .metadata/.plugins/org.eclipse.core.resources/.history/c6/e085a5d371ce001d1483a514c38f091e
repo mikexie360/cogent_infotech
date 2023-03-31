@@ -1,0 +1,24 @@
+import java.util.List;
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+public class BookManagementDAO implements BookManagement {
+	public void create(ArrayList<Book> list) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the book id");
+		int id = sc.nextInt();
+		System.out.println("Enter the book name");
+		String name = sc.next();
+		System.out.println("Enter the book price");
+		float price = sc.nextFloat();
+		Book b = new Book(id,name,price);
+		
+		list.add(b);
+	}
+	public void find();
+	public void update();
+	public void delete();
+	public void print();
+}

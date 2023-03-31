@@ -1,0 +1,11 @@
+package pkg;
+
+public interface Interface1 {
+	
+	// SAM Single abstract method
+	public void m1();
+
+	default void m2() {
+		
+	}
+}

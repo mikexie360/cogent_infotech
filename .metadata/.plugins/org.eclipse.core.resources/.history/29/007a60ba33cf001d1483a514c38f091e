@@ -1,0 +1,23 @@
+package pkg;
+
+interface MyInterface {
+	public int sum(int a, int b);
+}
+
+class MyClass implements MyInterface{
+	@Override
+	public void sum(int a, int b) {
+		System.out.println(a+b);
+	}
+}
+
+public class Application {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyInterface m1 =(int a, int b)->{ return (a+b);};
+
+	
+	}
+
+}

@@ -1,0 +1,36 @@
+package pkg;
+
+import java.util.Scanner;
+
+class Arithmetic{
+	public void division(int x, int y) {
+		
+	}
+}	
+
+
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try {
+			String input = args[0];
+			System.out.println("Input is: " + input);
+			int output = Integer.parseInt(input);
+			System.out.println("Output is: " + output);
+//		} catch (ArrayIndexOutOfBoundsException e){
+//			System.out.println("Array Index out of bounds exception");
+//		} catch (NumberFormatException e) {
+//			System.out.println("Number format exception!");
+//		}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			System.out.println("Will always be executed");
+		}
+		System.out.println("After catch");
+		
+	}
+
+}

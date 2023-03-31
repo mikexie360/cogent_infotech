@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+//SP2023_Adult_marmion
+public class SP2023_Adult_marmion {
+	private String name;
+	private int height;
+	private int weight;
+
+	// Constructors help classes create new objects
+
+	// default constrcuctor
+	public SP2023_Adult_marmion() {
+		name = "";
+		height = 0;
+		weight = 0;
+	}
+
+	// paramerterized constrcutor
+	public SP2023_Adult_marmion(String name, int height, int weight){
+		this.name = name;
+		this.height = height;
+		this.weight = weight;
+	}
+	
+	public double calculate_BMIRate() {
+		
+		return ((double)weight * 703) / ((double)height * height);  //BMI calculation
+
+	}
+	
+
+	
+}

@@ -1,0 +1,51 @@
+package pkg;
+
+interface myInterface{
+	public static void m1() {
+		System.out.println("This is static method");
+	}
+}
+
+class A implements myInterface {
+	
+	@Override
+	public void m1() {
+		System.out.println("Class A-I am inside m1");
+	}
+	@Override
+	public void m2() {
+		System.out.println("Class A-I am inside m2");
+	}
+	@Override
+	public void m3() {
+		System.out.println("Class A-I am inside m3");
+	}
+	
+}
+
+class B implements myInterface {
+	
+	@Override
+	public void m1() {
+		System.out.println("Class B-I am inside m1");
+	}
+	@Override
+	public void m2() {
+		System.out.println("Class B-I am inside m2");
+	}
+	@Override
+	public void m3() {
+		System.out.println("Class B-I am inside m3");
+	}
+	
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		myInterface mi = new A();
+		mi.m4();
+	}
+
+}

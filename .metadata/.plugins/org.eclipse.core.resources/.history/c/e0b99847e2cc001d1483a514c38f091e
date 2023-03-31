@@ -1,0 +1,38 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Emp emp=null;
+		
+		if (emp.designation.equals("Manager")) {
+			
+		} else if (emp.designation.equals("Officer")) {
+			
+		} else if (emp.designation.equals("Clerk")) {
+			
+		}
+		try {
+			emp = new Emp(1,"mike","Manager",1000);
+			emp.printDET();
+		} catch (LowSalExpectation e) {
+			System.out.println(e.toString());
+		}
+		
+		try {
+			emp = new Emp(1,"mike","Officer",1000);
+			emp.printDET();
+		} catch (LowSalExpectation e) {
+			System.out.println(e.toString());
+		}
+		
+		try {
+			emp = new Emp(1,"mike","Clerk",100);
+			emp.printDET();
+		} catch (LowSalExpectation e) {
+			System.out.println(e.toString());
+		}
+		emp.printDET();
+	}
+
+}

@@ -1,0 +1,17 @@
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+public class EmployeeByteStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileInputStream fis = null;
+		try {
+			in = new FileInputStream("c://streams//employee.txt");
+		}catch()
+		{
+			
+		}
+	}
+
+}

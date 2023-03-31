@@ -1,0 +1,102 @@
+import java.util.Scanner;
+
+import Seven.SevenPalindrome;
+public class HelloWorld {
+	public static void main(String[] args){
+/*		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter the day between 1 to 7");
+		
+		day =sc.nextInt();
+		String f="Mike";
+		f = f.concat(f);
+		System.out.println(f);
+*/		
+		SevenPalindrome Seven = new SevenPalindrome();
+		Seven(args[0]);
+		//EightBingo(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
+		//NineArrayMath();
+	}
+	
+	// write a program to list all even numbers less than or equal to the number n. take the value n as input from user.
+	public static void DayOneOne(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter a number greater than 1");
+		
+		int n = sc.nextInt();
+		
+		for (int i = 1; i <= n; i++){
+			if (i%2 == 0){
+				System.out.println(i);
+			}
+		}
+		
+	}
+//	public static void SevenPalindrome(String s) {
+//		String mystr = s;
+//		// to uppercase
+//		mystr = mystr.toUpperCase();
+//		
+//		System.out.println(mystr);
+//		// use stringBuilder
+//		StringBuilder strbuilder = new StringBuilder();
+//		strbuilder.append(mystr);
+//		
+//		// reverse
+//		strbuilder.reverse();
+//		
+//		// Print
+//		System.out.println(strbuilder);
+//		if(mystr.equals(strbuilder.toString())){
+//			System.out.println("Palindrome");
+//		} else {
+//			System.out.println("Not Palindrome");
+//		}
+//	}
+	public static void EightBingo(int first, int second){
+
+		int inARow = 0;
+		int[] bingoBoard = new int[5];
+		bingoBoard[0] = 3;
+		bingoBoard[1] = 29;
+		bingoBoard[2] = 30;
+		bingoBoard[3] = 39;
+		bingoBoard[4] = 40;
+		
+		System.out.println("Your first number was " + first + "\n");
+		System.out.println("Your second number was " + second + "\n");
+		for (int i = 0; i<bingoBoard.length; i++){
+			if (bingoBoard[i] == first){
+				inARow = inARow + 1;
+			}
+			if (bingoBoard[i] == second){
+				inARow = inARow + 1;
+			}
+		}
+		if (inARow >= 2){
+			System.out.println("Its Bingo! //// This message if "+ first+ " and " + second +" is found in the array");
+		}
+		else{
+			System.out.println("Not Bingo.");
+		}
+	}
+	public static void NineArrayMath(){
+		int A[]={3,2,4,5,6,4,5,7,3,2,3,4,7,1,2,0,0,0};
+		
+		int sum = 0;
+		int smallest = Integer.MAX_VALUE;
+		for (int i = 0; i<A.length-3; i++){
+			sum += A[i];
+			if (smallest > A[i]){
+				smallest = A[i];
+			}
+		}
+		A[15] = sum;
+		A[16] = (int)(((double)sum) /((double)15));
+		A[17] = smallest;
+		
+		for (int i = 0; i< A.length; i++){
+			System.out.print(A[i] + " ");
+		}
+	}
+}

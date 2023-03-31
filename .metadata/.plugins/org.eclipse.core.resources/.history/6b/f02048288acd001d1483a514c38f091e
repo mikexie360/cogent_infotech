@@ -1,0 +1,63 @@
+package serialization;
+
+import java.io.*;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class StreamBasedProgramDeserial {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		FileOutputStream fos = null;
+		ObjectOutputStream oos = null;
+		FileInputStream fis = null;
+		ObjectInputStream ois = null;
+		Student stud =null;
+		ArrayList<Student> arr = new ArrayList<Student>();
+		
+		do {
+			System.out.println("----------Menu----------");
+			System.out.println("0-exit");
+			System.out.println("1-Deserialize file and print");
+
+
+			try {
+				fis = new FileInputStream("c://streams//Student1.ser");
+				ois = new ObjectInputStream(fis);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			switch(sc.nextInt()) {
+			case 0: 
+				try {
+
+					fis.close();
+					ois.close();
+				} catch(Exception e) {
+					e.printStackTrace();
+				}
+				System.exit(0);
+				break;
+			case 1: // print
+
+				try {
+					for (;;) {
+						Object obj = ois.readObject();
+						stud=(Student)obj;
+						System.out.println("Student roll no: "+ stud.rollNumber);
+						System.out.println("Student Name: "+ stud.name);
+						System.out.println("Student age: "+ stud.age);
+						System.out.println("Student address: "+ stud.address);
+
+					}
+
+				} catch(Exception e) {
+					e.printStackTrace();
+				}		
+				
+				break;
+							}
+		} while(true);
+		
+	}
+}

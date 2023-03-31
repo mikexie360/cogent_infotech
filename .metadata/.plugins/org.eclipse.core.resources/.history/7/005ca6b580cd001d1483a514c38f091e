@@ -1,0 +1,13 @@
+package serialization;
+
+import java.io.*;
+
+public class DeserializationDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileInputStream fis = new FileInputStream("c://streams//Emp.ser");
+		
+	}
+
+}

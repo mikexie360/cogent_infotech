@@ -1,0 +1,50 @@
+package Book;
+
+import java.util.Scanner;
+
+public class BookDAO {
+	Scanner sc = new Scanner(System.in);
+	public void create(Book book[], int i) {
+		Book b = new Book();
+		book[i] = b;
+		System.out.println("Please enter the book ISBN: ");
+		book[i].setISBN(sc.nextInt());
+		System.out.println("Please enter the book name: ");
+		book[i].setName(sc.next());
+		System.out.println("Please enter the book price: ");
+		book[i].setPrice(sc.nextDouble());
+
+	}
+	public void read(Book book[]) {
+		for(Book b:book) {
+			System.out.println("Book ISBN is: "+ b.getISBN());
+			System.out.println("Book Name is: "+ b.getName());
+			System.out.println("Book Price is: "+ b.getPrice());
+
+
+		}
+	}
+	public void update(Book book[]) {
+		Book b = new Book();
+		System.out.println("Please enter the book IDBN to update: ");
+		int ISBN = sc.nextInt();
+		int index = -1;
+		for(int i = 0; i<book.length; i++) {
+			if (book[i].getISBN() == ISBN) {
+				index = i;
+			}
+		}
+		if (index == -1) {
+			System.out.println("book ISBN does not exist in record.\n");
+		} else {
+			System.out.println("Please enter the updated book ISBN");
+			book[index].setISBN(sc.nextInt());
+			book[index].setName("Please enter the update book Name");
+			book[index].setPrice(sc.nextDouble());
+		}
+		
+	}
+	public void delete() {
+		
+	}
+}

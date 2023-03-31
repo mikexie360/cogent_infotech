@@ -1,0 +1,23 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class BookMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		List<Book> books = new ArrayList<Book>();
+		
+		do {
+			System.out.println("--------Menu-----------");
+			System.out.println("0-exit");
+			System.out.println("1-Add book");
+			System.out.println("2-update book");
+			System.out.println("0-exit");
+			System.out.println("0-exit");
+			
+		} while(true);
+		
+	}
+
+}

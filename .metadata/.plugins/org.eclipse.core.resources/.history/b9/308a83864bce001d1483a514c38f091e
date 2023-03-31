@@ -1,0 +1,47 @@
+package Four;
+
+public class Storage extends Thread{
+	int storedInt;
+	Counter ct;
+	Printer pt;
+	boolean sem = false;
+	public Storage(int storedInt, Counter ct, Printer pt) {
+		this.storedInt = storedInt;
+		this.ct = ct;
+		this.pt = pt;
+	}
+	
+	public synchronized void count() {
+		while (sem) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				System.out.println("InterruptedException caught");
+			}
+			System.out.println("Consummed:" + ct.store);
+			sem = false;
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				System.out.println("InterruptedException caught");
+			}
+			notify();
+			ct.update(storedInt);
+		}
+		storedInt = ct.store;
+	}
+	public synchronized void print() {
+		pt.run();
+		storedInt =ct.store;
+	}
+	@Override
+	public void run() {
+		
+//		ct.update(storedInt);
+//		//ct.notify();
+//		pt.update(storedInt);
+//		
+//		//pt.notify();
+
+	}
+}

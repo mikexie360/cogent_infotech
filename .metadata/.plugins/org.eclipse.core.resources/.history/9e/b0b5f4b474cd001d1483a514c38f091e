@@ -1,0 +1,13 @@
+
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class ReaderAndWriterDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileReader fr = null;
+		FileWriter fw = null;
+	}
+
+}

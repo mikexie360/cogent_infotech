@@ -1,0 +1,7 @@
+package Compartment;
+
+public class FirstClass extends Compartment{
+	public void FirstClass() {
+		System.out.println("First Class");
+	}
+}

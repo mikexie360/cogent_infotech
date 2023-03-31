@@ -1,0 +1,8 @@
+package Four;
+
+public class Storage {
+	int storedInt;
+	public Storage(int storedInt) {
+		this.storedInt = storedInt;
+	}
+}

@@ -1,0 +1,26 @@
+package pkg;
+
+import java.util.Scanner;
+
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter two numbers:");
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		try {
+			System.out.println("Try");
+			int z = x/y;
+			System.out.println(z);
+			
+		} catch (ArithmeticException e) {
+			System.out.println(e.toString());
+			System.out.println(e.getStackTrace());
+			System.out.println("Division by zero not allowed!!");
+		}
+		System.out.println("Welcome");
+	}
+
+}

@@ -1,0 +1,24 @@
+package Four;
+
+public class FourMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Counter ct = new Counter(0);
+		Printer pt = new Printer(0);
+		Storage st = new Storage(0,ct,pt);
+		
+		st.start();
+
+
+		for(int i = st.storedInt; i<100; i++) {
+			synchronized (st) {
+				ct.notify();
+				pt.notify();
+			}
+			
+		}
+		
+	}
+
+}

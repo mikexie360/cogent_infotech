@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class ProductDAO{
+	Scanner sc = new Scanner(System.in);
+	public ProductDAO(Product[] p, int id) {
+		
+	}
+	
+	public void create() {
+		
+	}
+	
+	public void read() {
+		
+	}
+	
+	public void update() {
+		
+	}
+	
+	public void delete() {
+		
+	}
+}

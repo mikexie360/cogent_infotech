@@ -1,0 +1,15 @@
+package inheritance;
+
+public class Parent extends Person {
+	
+	public Parent() {
+		super();
+	}
+	
+	@Override
+	public void behavior() {
+		System.out.println("Has more respect");
+	}
+	
+	
+}

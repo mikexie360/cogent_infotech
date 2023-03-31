@@ -1,0 +1,29 @@
+package polymorphism;
+
+public class JohnTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person John = new Person("John");
+		Wife JohnWife = new Wife("JohnWife");
+		Parent JohnParent = new Parent("JohnParent");
+		Children JohnChild = new Children("JohnChild");
+		Colleague JohnColleague = new Colleague("JohnColleagues");
+		
+		System.out.println("John Person ");
+		John.likes();
+		
+		System.out.println("John Wife ");
+		JohnWife.likes();
+		
+		System.out.println("John Parent ");
+		JohnParent.likes();
+		
+		System.out.println("John Child ");
+		JohnChild.likes();
+		
+		System.out.println("John Colleagues ");
+		JohnColleague.likes();
+	}
+
+}

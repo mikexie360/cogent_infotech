@@ -1,0 +1,11 @@
+package inheritance;
+
+public class Children extends Parent{
+	public Children(String name) {
+		super(name);
+	}
+	
+	public void behavior() {
+		System.out.println("More love");
+	}
+}

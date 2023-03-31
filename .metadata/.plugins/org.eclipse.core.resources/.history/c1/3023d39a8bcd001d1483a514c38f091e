@@ -1,0 +1,18 @@
+package serialization;
+
+import java.io.Serializable;
+
+public class Student implements Serializable{
+	int rollNumber;
+	String name;
+	int age;
+	String address;
+	public Student(int rollNumber, String name, int age, String address) {
+		super();
+		this.rollNumber = rollNumber;
+		this.name = name;
+		this.age = age;
+		this.address = address;
+	}
+	
+}

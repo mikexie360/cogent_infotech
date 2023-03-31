@@ -1,0 +1,17 @@
+package LinkedList;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class LinkedListDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> list = new LinkedList<String>();
+		list.add("John");
+		list.add("Amit");
+	
+		System.out.println(list);
+	}
+
+}

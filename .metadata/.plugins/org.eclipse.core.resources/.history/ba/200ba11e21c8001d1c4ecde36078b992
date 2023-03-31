@@ -1,0 +1,15 @@
+
+public class BookTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		while(true){
+			break;
+		}
+		Book b1 = new Book();
+		b1.getUserInputScanner();
+		System.out.println(b1.toString());
+		
+	}
+
+}

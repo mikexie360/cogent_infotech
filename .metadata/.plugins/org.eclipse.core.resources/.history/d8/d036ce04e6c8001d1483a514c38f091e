@@ -1,0 +1,6 @@
+package Cogent.infotech;
+
+public abstract class Bank {
+	// an abstract class
+	abstract float getRateOfInterest();
+}

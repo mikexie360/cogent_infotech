@@ -1,0 +1,36 @@
+package Two;
+import java.util.*;
+
+public class Student {
+	private HashMap<String,String> empNames;
+	Scanner sc = new Scanner(System.in);
+	
+	public void setNames() {
+		System.out.println("Enter roll number");
+		String rollno = sc.next();
+		System.out.println("Enter name");
+		String name = sc.next();
+		empNames.put(rollno, name);
+	}
+	public void printNames() {
+		Collection<String> names = empNames.values();
+		System.out.println("All Names:");
+		System.out.println(names);
+	}
+	public void getName(String key) {
+		
+	}
+	public void printNamesKeySet() {
+		
+	}
+	
+	public void printSize() {
+		
+	}
+	public void remove(String key) {
+		
+	}
+	
+	
+	
+}

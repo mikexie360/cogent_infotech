@@ -1,0 +1,55 @@
+package ExceptionHandling;
+import java.util.Scanner;
+public class CalcMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String userIn = "";
+		Number num = new Number(0,0);
+		do {
+			System.out.println("-----------Menu-----------");
+			System.out.println("0-exit");
+			System.out.println("1-add");
+			System.out.println("2-sub");
+			System.out.println("3-mul");
+			System.out.println("4-div");
+			
+			userIn = sc.next();
+			
+			switch(Integer.parseInt(userIn)) {
+				case 0:
+					System.exit(0);
+					break;
+				case 1:
+					System.out.println("Enter two numbers to add");
+					num.setFirstNumber(Integer.parseInt(userIn));
+					num.setSecondNumber(Integer.parseInt(userIn));
+					num.add();
+					System.out.println("The sum is: "+num.getResult());
+					break;
+				case 2:
+					System.out.println("Enter two numbers to subtract");
+					num.setFirstNumber(Integer.parseInt(userIn));
+					num.setSecondNumber(Integer.parseInt(userIn));
+					num.sub();
+					System.out.println("The difference is: "+num.getResult());
+					break;
+				case 3:
+					System.out.println("Enter two numbers to multiply");
+					num.setFirstNumber(Integer.parseInt(userIn));
+					num.setSecondNumber(Integer.parseInt(userIn));
+					num.mul();
+					System.out.println("The product is: "+num.getResult());
+					break;
+				case 4:
+					break;
+				default:
+					break;
+			}
+			
+		} while(true);
+		
+	}
+
+}

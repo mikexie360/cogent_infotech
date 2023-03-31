@@ -1,0 +1,38 @@
+package ExceptionHandling;
+
+public class BankAccount {
+	int accNo;
+	String custName;
+	String accType; // Savings or Current
+	float balance;
+	
+	public BankAccount(){
+		super();
+	}
+	
+	public void deposit(float amt) throws NegativeAmount{
+		if(amt < 0) {
+			throw new NegativeAmount("Deposit Amount is negative");
+		}
+		balance += amt;
+	}
+	
+	public void withdraw(float amt) throws InsufficientFunds, NegativeAmount{
+		if((balance - amt) <0) {
+			throw new NegativeAmount("Cant withdraw into negative balance");
+		}
+		if (accType.equals("Savings") && (balance-amt) >=1000) {
+		}else {
+			throw new InsufficientFunds("Not enough in savings");
+		}
+		if (accType.equals("Current") && (balance-amt) >=5000) {
+			
+		}else {
+			throw new InsufficientFunds("Not enough in Current");
+		}
+		
+		balance = balance - amt;
+	}
+	
+	
+}

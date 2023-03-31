@@ -1,0 +1,12 @@
+package Four;
+
+public class Storage extends Thread{
+	int storedInt;
+	public Storage(int storedInt, Counter ct, Printer pt) {
+		this.storedInt = storedInt;
+	}
+	
+	public synchronized void count() {
+		
+	}
+}

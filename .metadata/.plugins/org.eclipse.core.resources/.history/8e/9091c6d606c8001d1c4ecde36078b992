@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class SevenPalindrome {
+	public static void main(String[] args){
+/*		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter the day between 1 to 7");
+		
+		day =sc.nextInt();
+		String f="Mike";
+		f = f.concat(f);
+		System.out.println(f);
+*/		
+		SevenPalindrome(args[0]);
+	}
+	
+
+	public static void SevenPalindrome(String s) {
+		String mystr = s;
+		// to uppercase
+		mystr = mystr.toUpperCase();
+		
+		System.out.println(mystr);
+		// use stringBuilder
+		StringBuilder strbuilder = new StringBuilder();
+		strbuilder.append(mystr);
+		
+		// reverse
+		strbuilder.reverse();
+		
+		// Print
+		System.out.println(strbuilder);
+		if(mystr.equals(strbuilder.toString())){
+			System.out.println("Palindrome");
+		} else {
+			System.out.println("Not Palindrome");
+		}
+	}
+
+}
