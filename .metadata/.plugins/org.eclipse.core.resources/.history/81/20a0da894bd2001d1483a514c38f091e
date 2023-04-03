@@ -1,0 +1,36 @@
+package empdept;
+
+import java.sql.*;
+
+public class empdept {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String query = "call retreive_persons";
+		String connectionURL = "jdbc:mysql://localhost:3306/emp_dept";
+	
+		try (
+				Connection conn = DriverManager.getConnection(connectionURL, "root","root");
+				CallableStatement stmt = conn.prepareCall(query);
+
+				) 
+			{
+				//int rows = stmt.executeUpdate(query);
+				//System.out.println("Rows inserted; " + rows);
+				
+				//int row = stmt.executeUpdate("delete from employee where emp_name='Shiva'");
+				//System.out.println("RowsUpdated" + row);
+				ResultSet rs = stmt.executeQuery();
+				while(rs.next()) {
+					System.out.println("ID: " + rs.getInt(1));
+					System.out.println("First Name: " + rs.getString(2));
+					System.out.println("Last Name: " + rs.getString(3));
+
+				}
+			} 
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+	}
+
+}

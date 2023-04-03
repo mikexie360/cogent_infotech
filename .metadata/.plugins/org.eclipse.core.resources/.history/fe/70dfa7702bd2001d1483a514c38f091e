@@ -1,0 +1,30 @@
+package cogent_jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.*;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String query = "select * from employee";
+		String connectionURL = "jdbc:mysql://localhost:3306/test";
+		try (
+			Connection conn = DriverManager.getConnection(connectionURL, "root","root");
+			PreparedStatement pstmt = conn.prepareStatement(query);
+			) 
+		{
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+				System.out.println("Employee ID: " +rs.getInt("emp_id"));
+			}
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

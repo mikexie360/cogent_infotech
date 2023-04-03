@@ -1,0 +1,58 @@
+package cogent_jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.*;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String query = "insert into employee(emp_no,emp_name,emp_salary) values(1002,'Shiva',3000)";
+		String connectionURL = "jdbc:mysql://localhost:3306/test";
+		
+		try (
+			Connection conn = DriverManager.getConnection(connectionURL, "root","root");
+			Statement stmt = conn.createStatement();
+
+			) 
+		{
+			//int rows = stmt.executeUpdate(query);
+			//System.out.println("Rows inserted; " + rows);
+			
+			int row = stmt.executeUpdate("update employee set emp_salary=10000 where emp_name='Shiva'");
+			
+			System.out.println("RowsUpdated");
+		
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		/*
+		query = "select * from actor order by first_name";
+		connectionURL = "jdbc:mysql://localhost:3306/sakila";
+		try (
+				Connection conn = DriverManager.getConnection(connectionURL, "root","root");
+				PreparedStatement pstmt = conn.prepareStatement(query);
+				) 
+			{
+				ResultSet rs = pstmt.executeQuery();
+				while(rs.next()) {
+					System.out.println("actor ID: " +rs.getInt("actor_id"));
+					System.out.println("first name: " +rs.getString("first_name"));
+					System.out.println("last name: " + rs.getString("last_name"));
+					System.out.println("last update: " + rs.getString("last_update"));
+
+				}
+			} 
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+		*/
+	
+	}
+
+}

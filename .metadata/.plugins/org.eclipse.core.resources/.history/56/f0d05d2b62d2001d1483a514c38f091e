@@ -1,0 +1,228 @@
+package empdept;
+
+import java.sql.*;
+import java.util.*;
+
+public class empdept {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String query = "";
+		String connectionURL = "jdbc:mysql://localhost:3306/emp_dept";
+		Scanner sc = new Scanner(System.in);
+		try (
+				Connection conn = DriverManager.getConnection(connectionURL, "root","root");
+			) 
+			{
+				while(true) {
+					System.out.println("-----------Menu-------------");
+					System.out.println("0-exit");
+					System.out.println("1-Insert a record in dept table");
+					System.out.println("2-Insert a record in employee table");
+					System.out.println("3-Upsate a salary of an employee");
+					System.out.println("4-Update the salary of all employees in a department");
+					System.out.println("5-Display employees that work in department 10 and 30");
+					System.out.println("6-Display empolyee detials");
+					System.out.println("7-Display name of employee with maximum salary in department 30");
+					System.out.println("8-Display name of employee and manager");
+					System.out.println("9-Display employee number and name of all employee whose salary is greater than the average salary of the department");
+					System.out.println("10-Display number and name of all employees whose salary is the same as ford.");
+					System.out.println("11-Display all Analysts");
+					System.out.println("12-Call procedure to return the name of the employee by passing employee id");
+					System.out.println("13-Get the name of the department given Employee id");
+
+					Statement stmt;
+					int deptNumber;
+					String deptName = null;
+					int empid = 0;
+					String empName=null;
+					double empSalary;
+					ResultSet rs = null;
+					CallableStatement cstmt = null;
+				switch(sc.nextInt()) {				
+					case 0:
+						System.exit(0);
+						break;
+					// question 1
+					case 1:
+						System.out.println("Enter department Number");
+						deptNumber = sc.nextInt();
+						System.out.println("Enter department Name");
+						deptName = sc.next();
+						query = "insert into dept values(" + deptNumber + ",'" + deptName+"')";
+						stmt = conn.createStatement();
+						stmt.executeUpdate(query);
+						System.out.println("Entered new record in department table");
+						break;
+					case 2:
+						System.out.println("Enter empid");
+						empid = sc.nextInt();
+						System.out.println("Enter empName");
+						empName = sc.next();
+						System.out.println("Enter empSalary");
+						empSalary = sc.nextDouble();
+						System.out.println("Enter deptNumber");
+						deptNumber = sc.nextInt();
+						query = "insert into employee values(" + empid + ",'" + empName+"',"+empSalary+","+deptNumber+")";
+						stmt = conn.createStatement();
+						stmt.executeUpdate(query);
+						System.out.println("Entered new record in employee table");
+						break;
+					// question 2
+					case 3:
+						System.out.println("Enter employee ID");
+						empid = sc.nextInt();
+						query = "Select * from employee where emp.empid = " + empid;
+						stmt = conn.createStatement();
+						rs = stmt.executeQuery(query);
+						while(rs.next()) {
+							
+							empid = rs.getInt(1);
+							System.out.println("Employee name: " + rs.getString(2));
+							System.out.println("Enter new salary for this employee");
+							empSalary = sc.nextDouble();
+							query = "update employee set empSalary = " + empSalary+" where empid = "+ empid;
+							stmt = conn.createStatement();
+							stmt.execute(query);
+						}
+						break;
+					// question 3
+					case 4:
+						System.out.println("Enter department Number");
+						deptNumber = sc.nextInt();
+						query = "Select * from employee where emp.deptNumber = " + deptNumber;
+						stmt = conn.createStatement();
+						rs = stmt.executeQuery(query);
+						while (rs.next()) {
+							System.out.println("id" + rs.getInt(1));
+							System.out.println("Name" + rs.getString(2));
+							System.out.println("Salary" + rs.getDouble(3));
+							System.out.println("deptNumber" + rs.getInt(4));
+
+							System.out.println("Enter new salary for this employee");
+							empSalary = sc.nextDouble();
+							query = "update employee set empSalary = " + empSalary+" where empid = "+ empid;
+							stmt = conn.createStatement();
+							stmt.execute(query);
+						}
+						
+						break;
+					// question 4
+					case 5:
+						query = "select e.* "
+								+ "from employee e, dept d "
+								+ "where e.deptNumber = d.deptNumber and (d.deptNumber = 10 or d.deptNumber = 30);";
+						stmt = conn.createStatement();
+						rs = stmt.executeQuery(query);
+						while(rs.next()) {
+							System.out.println("Employee id: " + rs.getInt(1) + "\tEmployee Name: " + rs.getString(2) + "\tEmployee Salary: " + rs.getDouble(3) + "\tEmployee dept Number: " + rs.getInt(4));
+						}
+						break;
+					// question 5
+					case 6:
+						query = "select distinct e.*, d.deptName "
+								+"from employee e, dept d "
+								+"where d.deptNumber = e.deptNumber;";
+						
+						stmt = conn.createStatement();
+						rs = stmt.executeQuery(query);
+						while(rs.next()) {
+							System.out.println("Employee id: " + rs.getInt(1) + "\tEmployee Name: " + rs.getString(2) + "\tEmployee Salary: " + rs.getDouble(3) + "\tEmployee dept Number: " + rs.getInt(4) + "\tEmploye department Name: " +rs.getString(5));
+						}
+						break;		
+					// question 6
+					case 7:
+						query = "select distinct employee.empName from employee where employee.deptNumber = 30 order by employee.empSalary desc limit 1";
+						stmt = conn.createStatement();
+						rs = stmt.executeQuery(query);
+						while(rs.next()) {
+							System.out.println(rs.getString(1));
+						}
+						break;
+					// question 7;
+					case 8:
+						query = "select managerName, employee.empName from manager, employee where manager.empid = employee.empid";
+						stmt = conn.createStatement();
+						rs = stmt.executeQuery(query);
+						while(rs.next()) {
+							System.out.println("Manager: " + rs.getString(1) + "\tEmployee: " + rs.getString(2));
+						}
+						break;
+					// question 8
+					case 9:
+						query = "select e.empid, e.empname, e.deptNumber "
+								+ "from employee e "
+								+ "where e.empSalary > "
+								+ "(select avg(empSalary) as averageSalary "
+								+ "from employee e1, dept where e.deptNumber = e1.deptNumber " 
+								+ "Group by e.deptNumber) "
+								+ "Group by e.deptNumber";
+						stmt = conn.createStatement();
+						rs = stmt.executeQuery(query);
+						while(rs.next()) {
+							System.out.println("Employee ID: " + rs.getInt(1) + "\tEmployee: " + rs.getString(2) + "\tDepartment Number: "+rs.getString(3));
+						}
+						break;
+					// question 9
+					case 10:
+						query = "select e.empid, e.empname "
+								+ "from employee e "
+								+ "where e.empName != \"Ford\" and e.empSalary = "
+								+ "( "
+								+ "select e1.empSalary "
+								+ "from employee e1 "
+								+ "where e1.empName = \"Ford\" "
+								+ ");";
+						stmt = conn.createStatement();
+						rs = stmt.executeQuery(query);
+						while(rs.next()) {
+							System.out.println("Employee ID: " + rs.getInt(1) + "\tEmployee: " + rs.getString(2));
+						}
+						break;
+					// question 10
+					case 11:
+						query = "Select e.* "
+								+ "from employee e, dept d "
+								+ "where d.deptName = \"Analyst\" and d.deptNumber = e.deptNumber;";
+						stmt = conn.createStatement();
+						rs = stmt.executeQuery(query);
+						while(rs.next()) {
+							System.out.println("Employee ID: " + rs.getInt(1) + "\tEmployee: " + rs.getString(2) + "\tEmployee Salary: " + rs.getDouble(3) + "\tEmoloyee department number: " + rs.getInt(4));
+						}
+						break;
+					// question 11
+					case 12:
+						System.out.println("Enter Employee id");
+						query = "call proc_empname (?)";
+						cstmt = conn.prepareCall(query);
+						empid = sc.nextInt();
+						cstmt.setInt(1, empid);
+						rs = cstmt.executeQuery();
+						while(rs.next()) {
+							System.out.println("Employee ID: " + rs.getInt(1) + "\tEmployee: " + rs.getString(2) + "\tEmployee Salary: " + rs.getDouble(3) + "\tEmoloyee department number: " + rs.getInt(4));
+						}
+						break;
+					// question 12
+					case 13:
+						System.out.println("Enter Employee id");
+						query = "call proc_dname(?)";
+						cstmt = conn.prepareCall(query);
+						empid = sc.nextInt();
+						cstmt.setInt(1, empid);
+						rs = cstmt.executeQuery();
+						while(rs.next()) {
+							System.out.println("Department Name: " + rs.getString(1));
+						}
+						break;
+						
+				}
+				
+				}
+
+			} 
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+	}
+
+}

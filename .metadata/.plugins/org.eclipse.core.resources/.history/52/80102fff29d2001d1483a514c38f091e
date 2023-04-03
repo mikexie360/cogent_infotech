@@ -1,0 +1,16 @@
+package cogent_jdbc;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String query = "select * from employee";
+		String connectionURL = "jdbc:mysql://localhost:3306/test";
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

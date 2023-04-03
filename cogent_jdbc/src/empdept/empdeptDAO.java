@@ -1,0 +1,9 @@
+package empdept;
+import java.sql.*;
+import java.util.*;
+public class empdeptDAO {
+	Scanner sc = new Scanner(System.in);
+	public void createDepartment() {
+		
+	}
+}

@@ -468,3 +468,11 @@ org.eclipse.core.runtime.CoreException: Launch configuration ReaderAndWriterDemo
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2023-04-03 09:43:38,237 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/speedment/archetypes/speedment-archetype-mysql/3.1.0/speedment-archetype-mysql-3.1.0.pom
+2023-04-03 09:43:38,414 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/speedment/archetypes/speedment-archetype-mysql/3.1.0/speedment-archetype-mysql-3.1.0.pom
+2023-04-03 09:43:38,494 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/speedment/archetypes/archetypes/3.1.0/archetypes-3.1.0.pom
+2023-04-03 09:43:38,559 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/speedment/archetypes/archetypes/3.1.0/archetypes-3.1.0.pom
+2023-04-03 09:43:38,625 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/speedment/speedment-parent/3.1.0/speedment-parent-3.1.0.pom
+2023-04-03 09:43:38,690 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/speedment/speedment-parent/3.1.0/speedment-parent-3.1.0.pom
+2023-04-03 09:43:38,775 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/speedment/archetypes/speedment-archetype-mysql/3.1.0/speedment-archetype-mysql-3.1.0.jar
+2023-04-03 09:43:38,852 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/speedment/archetypes/speedment-archetype-mysql/3.1.0/speedment-archetype-mysql-3.1.0.jar
