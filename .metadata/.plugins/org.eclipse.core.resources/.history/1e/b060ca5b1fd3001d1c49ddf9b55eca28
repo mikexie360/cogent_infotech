@@ -1,0 +1,6 @@
+package cogent.infotech.com;
+
+public class Customer {
+	private int id;
+	private Map<Integer,String> products;
+}

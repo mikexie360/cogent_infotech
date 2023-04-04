@@ -1,0 +1,6 @@
+package cogent.infotech.com;
+
+public class Employee {
+	private int id;
+	private String name;
+}

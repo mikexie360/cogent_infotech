@@ -1,0 +1,7 @@
+package cogent.infotech.com;
+
+public class Student {
+	private Scores scores;
+	
+	
+}

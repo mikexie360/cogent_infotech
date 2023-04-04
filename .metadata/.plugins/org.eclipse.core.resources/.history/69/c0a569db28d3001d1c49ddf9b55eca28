@@ -1,0 +1,8 @@
+package cogent.infotech.com;
+
+public class Scores {
+	private Double maths;
+	private Double physics;
+	private Double chemistry;
+	
+}

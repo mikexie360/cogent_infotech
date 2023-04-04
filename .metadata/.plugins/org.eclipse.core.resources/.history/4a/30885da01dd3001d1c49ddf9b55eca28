@@ -1,0 +1,17 @@
+package cogent.infotech.com;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
+		Hospital h = (Hospital)ctx.getBean("hospital");
+		
+		System.out.println("Hospital name: "+ h.getName());
+		System.out.println("Hospital department: " + h.getDepartment());
+		System.out.println(h.getClass().getClass());
+	}
+
+}
