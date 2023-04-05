@@ -1,0 +1,8 @@
+package cogent.infotech.innerbean;
+
+public class Employee {
+	private int id;
+	private Address address;
+	
+	
+}

@@ -1,0 +1,9 @@
+package cogent.infotech.com.one;
+
+public class Product {
+	private int pId;
+	private String pName;
+	private float pPrice;
+	
+	
+}

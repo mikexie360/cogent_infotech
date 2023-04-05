@@ -1,0 +1,23 @@
+package cogent.infotech.innerbean;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("cogent/infotech/innerbean/config.xml");
+		Employee e = (Employee)ctx.getBean("employee");
+		System.out.println(e.hashCode());
+	
+		Employee e1 = (Employee)ctx.getBean("employee");
+		e1.setId(5);
+		System.out.println(e1.hashCode());
+		
+		System.out.println(e);
+		System.out.println(e1);
+	}
+
+}

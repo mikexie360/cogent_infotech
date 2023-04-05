@@ -1,0 +1,18 @@
+package cogent.infotech.innerbean;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("cogent/infotech/innerbean/config.xml");
+		Person p = (Person)ctx.getBean("person");
+		Car car = p.getCar();
+		System.out.println(p.hashCode());
+	
+	}
+
+}

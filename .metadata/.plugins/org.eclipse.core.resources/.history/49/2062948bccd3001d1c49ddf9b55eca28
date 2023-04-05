@@ -1,0 +1,11 @@
+package cogent.infotech.com.check;
+
+import java.util.List;
+
+public class Prescription {
+	private int id;
+	private String patientName;
+	private List<String> medicines;
+	
+	
+}

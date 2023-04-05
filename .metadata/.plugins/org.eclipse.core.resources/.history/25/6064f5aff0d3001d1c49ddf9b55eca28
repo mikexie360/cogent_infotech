@@ -1,0 +1,13 @@
+package cogent.infotech.com.annotations;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class ChatService {
+	private final HistoryService historyService;
+	
+	private final ChatRoomService chatRoomService;
+
+	
+
+}

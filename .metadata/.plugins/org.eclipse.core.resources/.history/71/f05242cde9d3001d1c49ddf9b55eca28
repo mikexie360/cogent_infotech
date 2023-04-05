@@ -1,0 +1,7 @@
+package cogent.infotech.com.qualifier;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+	ApplicationContext ctx = new ClassPathXmlApplicationContext("cogent/infotech/com/autowiring/annotation/qualifier/config.xml");
+}

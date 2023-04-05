@@ -1,0 +1,9 @@
+package cogent.infotech.innerbean;
+
+public class Address {
+	private int hno;
+	private String street;
+	private String city;
+	
+	
+}

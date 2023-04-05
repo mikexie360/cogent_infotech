@@ -1,0 +1,8 @@
+package cogent.infotech.com.autowiring.annotation;
+
+public class Reservation {
+	private int id;
+	private String time;
+	
+	
+}

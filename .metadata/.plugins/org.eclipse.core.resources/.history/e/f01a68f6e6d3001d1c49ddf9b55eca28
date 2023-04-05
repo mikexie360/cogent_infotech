@@ -1,0 +1,24 @@
+package cogent.infotech.com.autowiring.annotation;
+
+public class Customer {
+	private String name;
+	private Reservation res;
+	
+	public Customer(Reservation res) {
+		this.res = res;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Reservation getRes() {
+		return res;
+	}
+	public void setRes(Reservation res) {
+		this.res = res;
+	}
+	
+	
+}

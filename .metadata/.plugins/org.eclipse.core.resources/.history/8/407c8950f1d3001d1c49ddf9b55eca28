@@ -1,0 +1,16 @@
+package cogent.infotech.com.annotations;
+
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ConfigurableApplicationContext ctx = new AnnotationConfigApplicationContext(Main.class);
+		ChatRoomService chatService = ctx.getBean(ChatRoomService.class);
+	
+	
+	}
+
+}

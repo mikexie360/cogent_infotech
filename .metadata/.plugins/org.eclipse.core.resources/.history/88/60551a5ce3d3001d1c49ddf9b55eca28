@@ -1,0 +1,6 @@
+package cogent.infotech.com.autowiring.annotation;
+
+public class Person {
+	private Car car;
+	
+}

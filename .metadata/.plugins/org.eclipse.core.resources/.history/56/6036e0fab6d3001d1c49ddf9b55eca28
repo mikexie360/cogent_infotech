@@ -1,0 +1,13 @@
+package cogent.infotech.com.spring;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class BeanConfiguration {
+	public Person getPerson() {
+		Person p = new Person();
+		p.setName("Mike");
+		p.setName(20);
+		return p;
+	}
+}

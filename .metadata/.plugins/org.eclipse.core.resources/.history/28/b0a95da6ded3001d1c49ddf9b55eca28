@@ -1,0 +1,8 @@
+package cogent.infotech.innerbean;
+
+public class Person {
+	private Car car;
+	Address add;
+	
+	
+}
