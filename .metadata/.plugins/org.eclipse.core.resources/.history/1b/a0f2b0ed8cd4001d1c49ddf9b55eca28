@@ -1,0 +1,19 @@
+package com.cogent.spring.springjdbc.book;
+
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class BookTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+	
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/cogent/spring/springjdbc/book/config.xml");
+		BookDAO Dao = new (BookDAOImp) ctx.getBean("BookDao");
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.cogent.spring.springjdbc.employee.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+	public static void main(String[] args) {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/cogent/spring/springjdbc/employee/test/config.xml");
+		ctx.getBean(null)
+	
+	}
+}

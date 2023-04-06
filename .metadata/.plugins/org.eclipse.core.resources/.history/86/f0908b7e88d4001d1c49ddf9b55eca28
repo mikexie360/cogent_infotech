@@ -1,0 +1,10 @@
+package com.cogent.spring.springjdbc.book;
+
+
+public interface BookDAO {
+	public int createBook(Book book);
+	public int readBook(Book book);
+	public int readAllBook(Book book);
+	public int updateBook(Book book);
+
+}

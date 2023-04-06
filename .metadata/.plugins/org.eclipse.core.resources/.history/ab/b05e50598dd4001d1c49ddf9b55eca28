@@ -1,0 +1,35 @@
+package com.cogent.spring.springjdbc.book;
+
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class BookTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+	
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/cogent/spring/springjdbc/book/config.xml");
+		BookDAO Dao = (BookDAOImp) ctx.getBean("BookDao");
+		Book book = null;
+		
+		while(true) {
+			System.out.println("-------------Menu---------------");
+			System.out.println("0-Exit");
+			System.out.println("1-Create book");
+			System.out.println("2-Read Single Book");
+			System.out.println("3-Read All Books");
+			System.out.println("4-Update Book");
+			System.out.println("5-Delete Book");
+			System.out.println("Please enter your choice");
+		
+			switch(sc.nextInt()()) {
+			
+			}
+		}
+		
+	}
+
+}

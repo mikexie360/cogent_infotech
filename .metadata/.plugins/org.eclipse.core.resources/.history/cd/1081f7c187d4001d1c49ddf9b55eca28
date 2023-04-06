@@ -1,0 +1,5 @@
+package com.cogent.spring.springjdbc.book;
+
+public interface BookDAO {
+	public int createBook(Book book);
+}

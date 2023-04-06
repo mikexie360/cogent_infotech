@@ -1,0 +1,49 @@
+package com.cogent.spring.springjdbc.book;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+@Component("BookDao")
+public class BookDAOImp implements BookDAO{
+
+	@Override
+	public int createBook(Book book) {
+		// TODO Auto-generated method stub
+		private int id;
+		private String title;
+		private String author;
+		private float price;
+		String sql="insert into employee values(?,?,?)";
+		int result=jdbcTemplate.update(sql,book.getId(),book.getTitle(),book.getAuthor()
+				,book.getPrice());
+		return result;
+		
+		return 0;
+	}
+
+	@Override
+	public int readBook(Book book) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Book> readAllBook() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int updateBook(Book book) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteBook(Book book) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

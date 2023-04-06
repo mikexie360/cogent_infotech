@@ -1,0 +1,5 @@
+package com.cogent.spring.springjdbc.employee.dto;
+
+public class Employee {
+
+}
