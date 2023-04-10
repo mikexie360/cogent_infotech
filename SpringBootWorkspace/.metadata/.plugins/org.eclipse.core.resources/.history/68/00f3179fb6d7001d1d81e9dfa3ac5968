@@ -1,0 +1,14 @@
+package cogent.infotech.com.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController("/api/v1")
+public class EmployeeController {
+	
+	@GetMapping("/employee")
+	public String display() {
+		return "Employee name is Shiva and salary is 1000";
+	}
+	
+}

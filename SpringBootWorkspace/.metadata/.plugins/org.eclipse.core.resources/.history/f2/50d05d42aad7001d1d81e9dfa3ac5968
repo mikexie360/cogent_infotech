@@ -1,0 +1,5 @@
+package com.cogent.infotech.bean;
+
+public class Greeting {
+
+}

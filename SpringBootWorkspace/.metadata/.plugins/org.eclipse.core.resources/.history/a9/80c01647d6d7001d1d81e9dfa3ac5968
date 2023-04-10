@@ -1,0 +1,63 @@
+package cogent.infotech.com.entity;
+
+import org.springframework.data.annotation.Id;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+@Entity
+public class Book {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long itemId;
+	private String itemName;
+	private Double itemPrice;
+	private int itemQuantity;
+	
+	public Book() {
+		super();
+	}
+
+	public Book(long itemId, String itemName, Double itemPrice, int itemQuantity) {
+		super();
+		this.itemId = itemId;
+		this.itemName = itemName;
+		this.itemPrice = itemPrice;
+		this.itemQuantity = itemQuantity;
+	}
+
+	public long getItemId() {
+		return itemId;
+	}
+
+	public void setItemId(long itemId) {
+		this.itemId = itemId;
+	}
+
+	public String getItemName() {
+		return itemName;
+	}
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
+	public Double getItemPrice() {
+		return itemPrice;
+	}
+
+	public void setItemPrice(Double itemPrice) {
+		this.itemPrice = itemPrice;
+	}
+
+	public int getItemQuantity() {
+		return itemQuantity;
+	}
+
+	public void setItemQuantity(int itemQuantity) {
+		this.itemQuantity = itemQuantity;
+	}
+	
+}

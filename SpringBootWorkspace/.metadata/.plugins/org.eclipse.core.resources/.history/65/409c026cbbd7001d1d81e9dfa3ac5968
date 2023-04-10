@@ -1,0 +1,5 @@
+package cogent.infotech.com.entity.repository;
+
+public interface EmployeeRepository {
+
+}

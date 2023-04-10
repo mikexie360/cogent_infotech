@@ -1,0 +1,10 @@
+package cogent.infotech.com.service;
+
+import org.springframework.stereotype.Service;
+import cogent.infotech.com.entity.Book;
+
+
+@Service
+public interface ItemService {
+	public Book save(Book item);
+}

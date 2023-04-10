@@ -1,0 +1,25 @@
+package cogent.infotech.com.entity;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.annotation.Id;
+
+import jakarta.annotation.Generated;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@EntityScan
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Employee {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long employeeId;
+	private String employeeName;
+	private String employeeAddress;
+	private String employeePhone;
+	
+}

@@ -1,0 +1,17 @@
+package cogent.infotech.com.service;
+
+import cogent.infotech.com.entity.Item;
+
+public class ItemServiceImpl implements ItemService{
+	
+	public ItemServiceImpl() {
+		
+	}
+
+	@Override
+	public Item save(Item item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

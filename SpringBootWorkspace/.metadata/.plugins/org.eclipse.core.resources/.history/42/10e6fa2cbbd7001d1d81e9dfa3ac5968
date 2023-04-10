@@ -1,0 +1,12 @@
+package cogent.infotech.com.entity;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@EntityScan
+public class Employee {
+	private Long employeeId;
+	private String employeeName;
+	private String employeeAddress;
+	private String employeePhone;
+	
+}

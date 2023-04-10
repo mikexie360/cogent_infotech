@@ -1,0 +1,17 @@
+package cogent.infotech.com.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import cogent.infotech.com.entity.Employee;
+
+public class EmployeeController {
+	@Autowired
+	private EmployeeController employeeService;
+
+	public Employee saveEmployee(@Validated @RequestBody Employee employee) {
+		return employeeService.saveEmployee(employee);
+	}
+
+}

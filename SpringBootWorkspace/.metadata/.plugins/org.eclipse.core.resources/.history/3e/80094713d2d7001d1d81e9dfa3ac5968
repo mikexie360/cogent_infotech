@@ -1,0 +1,8 @@
+package cogent.infotech.com.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class ItemRepository extends CrudRepository<Item,Integer>{
+
+}

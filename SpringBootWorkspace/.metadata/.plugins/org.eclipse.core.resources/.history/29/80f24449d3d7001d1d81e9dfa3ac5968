@@ -1,0 +1,21 @@
+package cogent.infotech.com.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cogent.infotech.com.entity.Item;
+import cogent.infotech.com.repository.ItemRepository;
+
+@Service
+public class ItemServiceImpl implements ItemService{
+	
+	@Autowired
+	ItemRepository itemRepo;
+
+	@Override
+	public Item save(Item item) {
+		// TODO Auto-generated method stub
+		return itemRepo.save();
+	}
+	
+}

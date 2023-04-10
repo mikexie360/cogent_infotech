@@ -1,0 +1,21 @@
+package cogent.infotech.com.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cogent.infotech.com.entity.Book;
+import cogent.infotech.com.repository.*;
+
+@Service
+public class BookServiceImpl implements BookService{
+	
+	@Autowired
+	BookRepository bookRepo;
+
+	@Override
+	public Book save(Book item) {
+		// TODO Auto-generated method stub
+		return bookRepo.();
+	}
+	
+}
