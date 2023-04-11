@@ -1,0 +1,14 @@
+package cogent.infotech.com.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.security.config.annotation.authentication.builders.*;
+import org.springframework.security.config.annotation.authentication.web.configuration.WebSecurityConfigurerAdapter;
+
+import cogent.infotech.com.service.*;
+
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+	
+	@Autowired
+	private CustomerUserDetailsService userDetailsService;
+}

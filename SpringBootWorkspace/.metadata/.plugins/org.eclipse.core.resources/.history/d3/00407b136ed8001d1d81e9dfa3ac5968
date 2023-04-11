@@ -1,0 +1,17 @@
+package cogent.infotech.com.entity;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="person")
+public class Person {
+	
+	
+	private long id;
+	private String name;
+	private String email;
+	private Passport passport;
+	
+	
+	
+}

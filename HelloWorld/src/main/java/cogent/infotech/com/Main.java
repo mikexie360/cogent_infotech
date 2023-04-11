@@ -10,6 +10,9 @@ public class Main {
 		Student s = (Student)ctx.getBean("student");
 		
 		System.out.println(s);
+		
+		
+		
 	}
 
 }

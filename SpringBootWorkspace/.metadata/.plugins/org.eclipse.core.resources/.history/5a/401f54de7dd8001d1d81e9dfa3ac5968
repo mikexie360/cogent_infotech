@@ -1,0 +1,8 @@
+package cogent.infotech.com.entity;
+
+
+@Entity
+@Table(name="comment")
+public class Comment {
+
+}

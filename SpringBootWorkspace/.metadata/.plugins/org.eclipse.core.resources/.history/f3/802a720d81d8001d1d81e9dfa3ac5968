@@ -1,0 +1,8 @@
+package cogent.infotech.com.entity;
+
+import javax.persistence.Id;
+
+@Id
+public class Student {
+
+}

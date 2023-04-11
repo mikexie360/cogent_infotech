@@ -1,0 +1,11 @@
+package cogent.infotech.com.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="post")
+public class Post {
+	private long id;
+	private String title;
+}

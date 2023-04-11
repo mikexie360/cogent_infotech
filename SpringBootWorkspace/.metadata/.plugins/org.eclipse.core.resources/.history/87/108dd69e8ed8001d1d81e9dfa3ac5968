@@ -1,0 +1,27 @@
+package cogent.infotech.com;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import jakarta.annotation.PostConstruct;
+import cogent.infotech.com.entity.*;
+
+@SpringBootApplication
+public class SpringBootSecurityAppApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootSecurityAppApplication.class, args);
+		
+
+	}
+	
+	@PostConstruct
+	public void initUser() {
+		List<User> users = new ArrayList<>();
+		users.add(new User(101,"mike","password","mike@gmail.com"));
+	}
+
+}

@@ -1,0 +1,6 @@
+package cogent.infotech.com.dao;
+
+
+public class UserInfoDAO {
+
+}

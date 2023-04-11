@@ -2,8 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="C:\workspace\cogent_jdbc\src\empdept\empdept.java"/>
 			<item value="C:\workspace"/>
+			<item value="C:\workspace\cogent_jdbc\src\empdept\empdept.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -27,13 +27,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="cogent.infotech.com.HelloWorld"/>
+			<item value="spring.jdbc"/>
 		</list>
 		<list key="groupId">
-			<item value="cogent.infotech.com"/>
+			<item value="spring"/>
 		</list>
 		<list key="artifactId">
-			<item value="HelloWorld"/>
+			<item value="jdbc"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -69,5 +69,7 @@
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
 	</section>
 </section>

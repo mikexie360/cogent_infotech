@@ -84,5 +84,26 @@ BEGIN
 END$$
 DELIMITER ;
 call proc_dname(30);
+create database mydb;
+use mydb;
+create table employee(id int,firstname varchar(20),lastname varchar(20));
+insert into employee values(1001, "John", "Doe"); 
+select * from employee;
+Select Distinct * from employee e where e.id = 1001 ;
+Delete  from employee where employee.id = 1001;
 
+use mydb;
+create table book(
+id int,
+title varchar(50),
+author varchar(50),
+price float
+);
+select * from book;
+Select distinct * from book b where b.id = 1; 
+Update book set book.title="cpp", book.author="tom",book.price=100 where book.id = 1;
 
+select * from book;
+
+show tables;
+select * from person;

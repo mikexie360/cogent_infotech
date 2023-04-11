@@ -1,0 +1,17 @@
+package cogent.infotech.com.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import java.util.*;
+@Entity
+@Table(name="post")
+public class Post {
+	private long id;
+	private String title;
+	private String description;
+	List<Comment> comments = new ArrayList();
+	public Post() {
+		
+	}
+}

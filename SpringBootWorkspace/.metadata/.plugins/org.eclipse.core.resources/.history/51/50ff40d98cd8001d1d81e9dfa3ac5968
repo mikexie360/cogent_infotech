@@ -1,0 +1,5 @@
+package cogent.infotech.com.config;
+
+public class SecurityConfig {
+
+}

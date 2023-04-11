@@ -1,0 +1,68 @@
+package cogent.infotech.com;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.*;
+
+import cogent.infotech.com.entity.Passport;
+import cogent.infotech.com.entity.Person;
+import cogent.infotech.com.repository.EmployeeRepository;
+
+import cogent.infotech.com.entity.*;
+
+@SpringBootApplication
+public class OneToOneJpaEmployeePassportApplication  implements CommandLineRunner {
+
+	@Autowired
+	EmployeeRepository empRepo;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(OneToOneJpaEmployeePassportApplication.class, args);
+	}
+	
+	@Override
+	public void run(String... args) throws Exception {
+		Employee emp = new Employee();
+//		emp.setName("john");
+//		emp.setEmail("john@gmail.com");	
+//		
+		Passport passport = new Passport();
+//		passport.setExpiry("24-07-2024");
+//		passport.setAddress("New York");
+//		
+//		emp.setPassport(passport);
+//		empRepo.save(emp);
+//		System.out.println("Employee details are saved successfully.");
+
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			switch(sc.nextInt()) {
+			case 1:
+				System.out.println("emp name");
+				emp.setName(sc.next());
+				System.out.println("emp email");
+				emp.setEmail(sc.next());	
+			
+				System.out.println("passport expire date");
+				passport.setExpiry(sc.next());
+				System.out.println("passport address");
+				passport.setAddress(sc.next());
+			
+				emp.setPassport(passport);
+				empRepo.save(emp);
+				System.out.println("Employee details are saved successfully.");
+
+			case 2:
+				System.exit(0);
+			}
+		}
+		
+		
+		
+		
+	}
+
+}
