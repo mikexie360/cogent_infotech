@@ -1,0 +1,25 @@
+mark.blue{
+    font-display:#0000A0;
+    background: none;
+}
+h2.header{
+    font-style: Georgia;
+    color:#3678B7;
+    background-color: #BAD2EB;
+}
+table,
+table th,
+table td{
+    border: 1px solid #cccccc;
+    border-collapse: collapse;
+}
+.center {
+    text-align:center;
+    vertical-align:middle;
+}
+#left{
+    float: left;
+}
+#right{
+    float: right;
+}

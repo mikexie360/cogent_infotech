@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            video {
+                display:block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .container {
+                height: 200px;
+                position: relative;
+                border: 3px solid green; 
+            }
+            .horizontal-center{
+                border: 3px solid green; 
+                top: 50%;
+                position: absolute;
+                left:10%;
+            }
+        </style>
+    </head>
+    <body>
+        <video autoplay controls id="video1" width="300">
+            <source src="angular.mp4">
+        </video>
+        <br>
+        <div class="container">
+        <div class="horizontal-center">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="Big()">Big</button>
+        <button onclick="small()">Small</button>
+        <button onclick="normal()">Normal</button>
+        </div>
+        </div>
+        <script>
+            var ctx = document.getElementById("video1");
+            var currwidth = ctx.clientWidth;
+            var currheight = ctx.currheight;
+            function playPause(){
+                if(ctx.paused){
+                    ctx.play();
+                }
+                else{
+                    ctx.pause();
+                }
+
+            }
+            function Big(){
+                ctx.width +=100;
+            }
+            function small(){
+                ctx.width -=100;
+            }
+            function normal(){
+                ctx.width = 300;
+            }
+        </script>
+        <canvas id="canvas1" width="800" height="500" style="border:10px solid green">
+            <script>
+                //var ctxv = document.getElementById("canvas1");
+                //var ctxc = ctxv.getContext("2d");
+                //ctxc.fillStyle="red";
+                //ctxc.fillRect(25,25,150,75);
+                //ctxc.fillStyle="blue";
+                //ctxc.fillRect(100,100,75,75);
+                //ctxc.font="50pt Arial";
+                //ctxc.fillText("HTML TEXT", 200,200);
+                var canvas = document.getElementById("canvas1")
+                var v = canvas.getContext("2d");
+                v.fillStyle="red";
+                v.beginPath();
+                v.arc(100,75,50,0,2*Math.PI);
+                v.lineWidth=5;
+                v.strokeStyle = "red";
+                v.stroke();
+
+                v.strokeStyle = "blue";
+                //head
+                v.beginPath();
+                v.arc(300,75,50,0,2*Math.PI);
+                v.stroke();
+                //body
+                v.beginPath();
+                v.arc(300,175,50,0,2*Math.PI);
+                v.stroke();
+                //left ear
+                v.beginPath();
+                v.arc(240,75,10,0,2*Math.PI);
+                v.stroke();
+                //right ear
+                v.beginPath();
+                v.arc(360,75,10,0,2*Math.PI);
+                v.stroke();
+                //mouth
+                v.beginPath();
+                v.arc(300,90,10,0,2*Math.PI);
+                v.stroke();
+                //right eye
+                v.beginPath();
+                v.arc(320,75,10,0,2*Math.PI);
+                v.stroke();
+                //left eye
+                v.beginPath();
+                v.arc(280,75,10,0,2*Math.PI);
+                v.stroke();
+            </script>
+        </canvas>
+
+    </body>
+</html>
