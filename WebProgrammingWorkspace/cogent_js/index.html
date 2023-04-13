@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Javascript fundamentals
+        </title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <a href="" onmouseover="green()" onmouseout="white()">Green</a>
+        <a href="" onmouseover="red()" onmouseout="white()">Red</a>
+        <a href="" onmouseover="blue()" onmouseout="white()">Blue</a>
+        <a href="" onmouseover="yellow()" onmouseout="white()">Yellow</a>
+
+        <script>
+            function yellow(id){
+                document.getElementById(id).style.background="yellow";
+            }
+            function white(id){
+                document.getElementById(id).style.background="white";
+            }
+            function validate(){
+                if(document.loginfrm.user.value==""){
+                    alert("Please enter a username");
+                    document.loginfrm.user.focus();
+                    return false;
+                }
+                if(document.loginfrm.password.value==""){
+                    alert("Please enter a password")
+                    document.loginfrm.password.focus();
+                    return false;
+                }
+                return true;
+            }
+            // function myToString(){
+            //     return "" + this.title + " by " + this.author;
+            // }
+            // function showAll(){
+            //     window.alert(this.toString());
+            // }
+            // var myBook = {
+            //     author: "mike",
+            //     title: "java",
+            //     print: showAll,
+            //     toString: myToString
+            // };
+            // myBook.print();
+
+            function sayHello(name){
+                window.alert("Hello " + name);
+            }
+            var mySite = new Object();
+            var myBook1 = new Object();
+            mySite.url = "http://web.com";
+            myBook1.author = "mark";
+            myBook1.greet = sayHello;
+
+            myBook1.greet(myBook1.author);
+            delete myBook1.greet;
+        </script>
+        <button onclick="green()">Green</button>
+        <button onclick="blue()">Blue</button>
+        <button onclick="red()">Red</button>
+        <button onclick="yellow()">Yellow</button>
+        <form name="loginfrm" onsubmit="return validate()">
+            <label>Enter your name</label>
+            <input name="user" type="text" id="name_txt" onfocus="yellow('name_txt')" onblur="white('name_txt')">
+            <label>Enter your password</label>
+            <input name="password" type="password" id="password_txt" onfocus="yellow('password_txt')" onblur="white('password_txt')">
+            <input type="submit">
+        </form>
+    </body>
+</html>
