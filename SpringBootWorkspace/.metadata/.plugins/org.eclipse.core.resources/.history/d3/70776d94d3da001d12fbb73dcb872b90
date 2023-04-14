@@ -1,0 +1,51 @@
+package com.example.SpringBootAssessment.service;
+
+import java.util.List;
+
+import com.example.SpringBootAssessment.entity.Movie;
+
+public class MovieServiceImpl implements MovieService{
+
+	@Override
+	public Movie putMovie(Movie movie) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Movie> getMovies() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Movie getMovieById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Movie getMovieByGenre(String genre) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Movie> getAllMovies() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Movie saveOrUpdate(Movie movie) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteMovieById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

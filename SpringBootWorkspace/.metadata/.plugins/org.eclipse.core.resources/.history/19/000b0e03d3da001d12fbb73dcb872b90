@@ -1,0 +1,5 @@
+package com.example.SpringBootAssessment.service;
+
+public class MovieServiceImpl implements MovieService{
+
+}

@@ -1,0 +1,40 @@
+package com.example.SpringBootAssessment;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.SpringBootAssessment.entity.Movie;
+import com.example.SpringBootAssessment.entity.User;
+import com.example.SpringBootAssessment.repository.*;
+
+@SpringBootApplication
+public class SpringBootAssessmentApplication {
+	@Autowired
+	UserRepository userRepo;
+	
+	@Autowired
+	MovieRepository movieRepo;
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootAssessmentApplication.class, args);
+	}
+	@PostConstruct
+	public void initUser() {
+		List<User> users = new ArrayList<>();
+		users.add(new User(1,"mike","password"));
+		users.add(new User(2,"john","password"));
+		users.add(new User(3,"Robert","password"));
+		userRepo.saveAll(users);
+		
+		List<Movie> movies = new ArrayList<>();
+		movies.add(new Movie(1,"The 300", "January","300 spartans defending a pass","action"));
+		movies.add(new Movie(2,"Puss in Boots","March","Cat figjting in boots","action"));
+		movies.add(new Movie(3,"Holes","October","Some guy digging holes","action"));
+		movieRepo.saveAll(movies);
+	}
+}

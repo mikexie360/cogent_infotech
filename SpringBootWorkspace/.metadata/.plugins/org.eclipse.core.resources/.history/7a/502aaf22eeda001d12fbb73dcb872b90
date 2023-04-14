@@ -1,0 +1,8 @@
+package com.example.SpringBootAssessment.repository;
+
+import org.springframework.stereotype.Repository;
+import com.example.SpringBootAssessment.entity.*;
+
+public class RoleRepo extends JpaRepository<Role,Integer>{
+
+}

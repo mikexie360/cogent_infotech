@@ -1,0 +1,62 @@
+package com.example.SpringBootAssessment.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.SpringBootAssessment.entity.Movie;
+
+import com.example.SpringBootAssessment.repository.*;
+
+import com.example.SpringBootAssessment.entity.*;
+
+@Service
+public class MovieServiceImpl implements MovieService{
+
+	@Autowired
+	MovieRepository movieRepo;
+
+	@Override
+	public Movie putMovie(Movie movie) {
+		// TODO Auto-generated method stub
+		return movieRepo.save(movie);
+	}
+
+	@Override
+	public List<Movie> getMovies() {
+		// TODO Auto-generated method stub
+		return (List<Movie>)movieRepo.findAll();
+	}
+
+	@Override
+	public Movie getMovieById(int id) {
+		// TODO Auto-generated method stub
+		return movieRepo.findById((int)id).get();
+	}
+
+	@Override
+	public List<Movie> getMoviesByGenre(String genre) {
+		// TODO Auto-generated method stub
+		return movieRepo.findBy(null, null)	
+	}
+
+	@Override
+	public List<Movie> getAllMovies() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Movie saveOrUpdate(Movie movie) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteMovieById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

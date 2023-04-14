@@ -1,0 +1,16 @@
+package com.example.SpringBootAssessment.entity;
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+import java.util.*;
+
+@Entity
+@Data
+public class User {
+	private Integer id;
+	private String username;
+	private String password;
+	
+	private List<Movie> favoriteMovies;
+}

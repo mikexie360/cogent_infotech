@@ -1,0 +1,5 @@
+package com.example.SpringBootAssessment.repository;
+
+public class RoleRepo {
+
+}
