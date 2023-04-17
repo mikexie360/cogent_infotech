@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+//SP2023_CreditCardService_Marmion
+
+public class SP2023_CreditCardService_Marmion {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);  //this is for the user input
+		// remember to cast doubles into floats
+		final float CREDIT_LINE = 5000.00f;
+		final float INTEREST_RATE = (float)14.29;
+		
+		// flags
+		boolean flagAccountCreated = false;
+		String name;
+
+		int option;
+		do {
+		System.out.println("SP2023_CreditCardService_Marmion.java");
+		System.out.println("CREDIT CARD SERVICE MENU - ZACH MARMION");
+		System.out.println("--------------------------------------------");
+		System.out.println("1. Open new credit card account");
+		System.out.println("2. Process one transaction");
+		System.out.println("3. Read current balance");
+		System.out.println("4. Read interest rate");
+		System.out.println("5. Payment process");
+		// case 6
+		System.out.println("0. Exit");
+		System.out.println("Enter a number to select the task: ");
+		option = sc.nextInt();
+
+		// guard clauses
+		if (flagAccountCreated == false && option !=1) {
+			// we tell the user to create an account first
+			System.out.println("You must select 1 to open credit account first");
+			continue;
+		}
+		
+		switch (option) {
+			case 1: 
+				System.out.println("Enter your name: ");
+				name = sc.next();
+				// classname nameofobject = new constructor();'
+				SP2023_CreditCardAccount_Marmion creditCardAccount1 = 
+					new SP2023_CreditCardAccount_Marmion(name,CREDIT_LINE,INTEREST_RATE);
+				creditCardAccount1.openAccount();
+				flagAccountCreated = true;
+				break;
+			case 2:
+				System.out.println("Process one transaction");
+				break;
+			case 3:
+				System.out.println("Read current balance");
+				break;
+			case 4:
+				System.out.println("Read interest rate");
+				break;
+			case 6:
+				System.out.println("Payment process");
+				break;
+			// case 6
+			case 0:
+				System.out.println("Exiting account");
+				System.exit(0);
+			default:
+				System.out.println("Invalid input");
+		}
+
+		} while (true);
+
+	}
+}

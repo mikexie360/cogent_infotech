@@ -1,0 +1,28 @@
+h1 {
+    background-color: aqua;
+    font-family: large;
+    font: italic;
+    text-emphasis-color: inherit;
+}
+
+#id1{
+    background-color: aquamarine;
+    font-size: 20px;
+
+}
+.class1{
+    background-color: green;
+    font-size: 20px;
+}
+ul.d {
+    list-style-type: disc;
+}
+ul.c {
+    list-style-type: circle;
+}
+ul.s {
+    list-style-type: square;
+}
+ul.none {
+    list-style-type: none;
+}

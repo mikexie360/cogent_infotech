@@ -1,0 +1,171 @@
+//SP2023_CreditCardAccount_Marmion
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
+
+public class SP2023_CreditCardAccount_Marmion {
+	private String name;
+	private String cardNumber;
+	private String csv;
+	float availableAmount;
+	float currentBalance = 0;
+	float statementBalance = 0;
+	float interestRate;
+	
+
+	public SP2023_CreditCardAccount_Marmion() {
+		name = "";
+		cardNumber = "";
+		csv = "";
+
+	}
+
+	public SP2023_CreditCardAccount_Marmion(String name, String cardNumber, String csv) {
+		this.name = name;
+		this.cardNumber = cardNumber;
+		this.csv = csv;
+	}
+
+	public SP2023_CreditCardAccount_Marmion(String name, float creditLine, float interestRate) {
+		this.name = name;
+		this.availableAmount = creditLine;
+		this.interestRate = interestRate;
+	}
+	
+	// VerifyAccountNumber() accepts the accountNumber that is passed from the driver class
+	// compare the accountNumber to the credit card number
+	// if same, then return true, otherwise return false
+	public boolean verifyAccountNumber(String accountNumber) {
+		// check if same
+		if(accountNumber.compareTo(cardNumber)==0){
+			return true;
+		}
+		return false;
+	}
+	// method accepts the csv number that is passed from the driver class
+	// compare the csv number to csv
+	// if same, return true, else return false
+	public boolean verifyCSV(String csv) {
+		// check if same
+		// this key word refers to the varible in the object
+		// this.csv refers to the csv of the object
+		if(this.csv.compareTo(csv)==0) {
+			return true;
+		}
+		return false;
+	}
+	
+	// get the current date
+	public String getCurrentDate() {
+		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");  
+	    Date date = new Date();  
+	    return formatter.format(date);   
+	}
+	
+	// generate credt card number
+	public static String generateCreditCardNumber()
+	{
+		Random rand = new Random();
+		int value1 = rand.nextInt(9000) + 1000;
+		int value2 = rand.nextInt(9000) + 1000;
+		int value3 = rand.nextInt(9000) + 1000;
+		int value4 = rand.nextInt(9000) + 1000;
+		return String.valueOf(value1) + String.valueOf(value2) +  
+                String.valueOf(value3) + String.valueOf(value4);
+	}
+
+	// TO DO:
+	public void openAccount(){
+		// display
+	}
+	
+	// process one transaction
+	// method must accept the transaction amount passed from the driver
+	// if the transaction is greater than the available amount then display message
+	// "invalid transaction amount"
+	// otherwise calculate:
+	// available amount = available amount - transaction amount
+	// current balance = current balance + transaction amount
+	// finally display everything. transaction amount, current balance, available amount
+	public void processTransaction(float transactionAmount) {
+		if (transactionAmount > availableAmount) {
+			System.out.println("Invalid transaction amount");	
+			
+		} else {
+			availableAmount = availableAmount - transactionAmount;
+			currentBalance = currentBalance + transactionAmount;
+		}
+		// display everything
+	}
+	
+	// Read current balance
+	public void readBalance() {
+		// Display
+	}
+	
+	// Read Interest Rate
+	public void readInterestRate() {
+		
+	}
+	
+	
+	// Print Statement
+	public void printStatement() {
+		
+	}
+	
+	
+	// Payment process
+	// the method must accept the payment amount that is passed from the driver class
+	// calculate
+	// display
+	public void paymentProcess(float paymentAmount) {
+		currentBalance = statementBalance - paymentAmount;
+		float interestAmount = currentBalance + interestRate / 100;
+		currentBalance = currentBalance + interestAmount;
+		availableAmount = availableAmount + paymentAmount;
+	
+	
+	    //display
+		System.out.printf("File: SP2023_CreditCardAccount_Marmion.cpp\n");
+		System.out.printf("OPEN NEW CREDIT CARD ACCOUNT - ZACH MARMION\n");
+		System.out.printf("----------------------------------------------------\n");
+		System.out.printf("Name: %33s\n", name);
+		System.out.printf("Card Number: %31s\n", cardNumber);
+		System.out.printf("----------------------------------------------------\n");
+		System.out.printf("Statement Amount: %25s\n", statementBalance);
+		System.out.printf("Payment Amount: %25s\n", paymentAmount); 
+		System.out.printf("Interest Amount: %25s\n", interestAmount);
+		System.out.printf("Current Balance: %25s\n", currentBalance);
+		System.out.printf("Available Amount: %25s\n", availableAmount);
+
+	    
+	    
+	    
+	}
+	
+	
+	
+	
+	public String toString() {
+		//Displays results
+		System.out.printf("File: SP2023_CreditCardAccount_Marmion.cpp\n");
+		System.out.printf("OPEN NEW CREDIT CARD ACCOUNT - ZACH MARMION\n");
+		System.out.printf("----------------------------------------------------\n");
+		System.out.printf("Name: %33s\n", name);
+		System.out.printf("Card Number: %31s\n", cardNumber);
+		System.out.printf("CSV: %33s\n", csv);
+		System.out.printf("----------------------------------------------------\n");
+		System.out.printf("Available Amount: %25s\n", availableAmount);
+		System.out.printf("Current Balance: %25s\n", currentBalance);
+		System.out.printf("Statement Balance: %25s\\n", statementBalance); 
+		System.out.printf("Interest Rate: %25s\\n", interestRate);
+		System.out.printf("----------------------------------------------------\n");
+
+		return "";
+	}
+	
+}
+
+

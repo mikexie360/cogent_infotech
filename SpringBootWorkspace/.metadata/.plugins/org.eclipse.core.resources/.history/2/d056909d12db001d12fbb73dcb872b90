@@ -1,0 +1,91 @@
+//SP2023_CreditCardAccount_Marmion
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
+
+public class SP2023_CreditCardAccount_Marmion {
+	private String name;
+	private String cardNumber;
+	private String csv;
+	float availableAmount;
+	float currentBalance = 0;
+	float statementBalance = 0;
+	float interestRate;
+
+	public SP2023_CreditCardAccount_Marmion() {
+		name = "";
+		cardNumber = "";
+		csv = "";
+
+	}
+
+	public SP2023_CreditCardAccount_Marmion(String name, String cardNumber, String csv) {
+		this.name = name;
+		this.cardNumber = cardNumber;
+		this.csv = csv;
+
+	}
+
+
+	
+	// VerifyAccountNumber() accepts the accountNumber that is passed from the driver class
+	// compare the accountNumber to the credit card number
+	// if same, then return true, otherwise return false
+	public boolean verifyAccountNumber(String accountNumber) {
+		// check if same
+		if(accountNumber.compareTo(cardNumber)==0){
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public boolean verifyCSV() {
+		String csvNumber = "";
+		
+		return false;
+	}
+	
+	
+	public String getCurrentDate() {
+		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");  
+	    Date date = new Date();  
+	    return formatter.format(date);   
+	}
+	
+	
+	public static String generateCreditCardNumber()
+	{
+		Random rand = new Random();
+		int value1 = rand.nextInt(9000) + 1000;
+		int value2 = rand.nextInt(9000) + 1000;
+		int value3 = rand.nextInt(9000) + 1000;
+		int value4 = rand.nextInt(9000) + 1000;
+		return String.valueOf(value1) + String.valueOf(value2) +  
+                String.valueOf(value3) + String.valueOf(value4);
+	}
+
+	
+	
+	public String toString() {
+		//Displays results
+		System.out.printf("File: SP2023_CreditCardAccount_Marmion.cpp\n");
+		System.out.printf("OPEN NEW CREDIT CARD ACCOUNT - ZACH MARMION\n");
+		System.out.printf("----------------------------------------------------\n");
+		System.out.printf("Name: %33s\n", name);
+		System.out.printf("Card Number: %31s\n", cardNumber);
+		System.out.printf("CSV: %33s\n", csv);
+		System.out.printf("----------------------------------------------------\n");
+		System.out.printf("Available Amount: %25s\n", availableAmount);
+		System.out.printf("Current Balance: %25s\n", currentBalance);
+		System.out.printf("Statement Balance: %25s\\n", statementBalance); 
+		System.out.printf("Interest Rate: %25s\\n", interestRate);
+		System.out.printf("----------------------------------------------------\n");
+
+		return "";
+	}
+	
+}
+
+
