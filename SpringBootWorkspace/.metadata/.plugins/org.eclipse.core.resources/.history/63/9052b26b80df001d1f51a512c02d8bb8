@@ -1,0 +1,14 @@
+package cogent.infotech.com.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import cogent.infotech.com.repository.UserRepository;
+
+public class UserController {
+	@Autowired
+	private UserRepository userRepo;
+
+	public List<User> getUsers(){
+		return this.userRepo.findAll();
+	}
+}
