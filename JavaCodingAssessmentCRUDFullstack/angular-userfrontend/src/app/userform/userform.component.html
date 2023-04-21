@@ -1,0 +1,18 @@
+<div class="card" style="width: 50rem;">
+    <div class="card-header">
+      <h5 class="card-title">User</h5>
+    </div>
+    <div class="card-body">
+        <form novalidate #userform="ngForm">
+            <label class="form-label">Name: </label> 
+            <input class="form-control" type="text" required #name> <br>
+            <label >Age: </label> 
+            <input class="form-control" type="text" required #age><br>
+            <label >Salary: </label>
+            <input class="form-control" type="text" required #salary>
+            <button (click)="refresh($event)" class="btn btn-primary float-end btn btn-warning">Reset Form</button>
+            <button (click)="onSubmitPost($event, name.value, age.value, salary.value)" class="btn btn-primary float-end btn btn-info">Add</button>
+        </form>
+
+    </div>
+</div>

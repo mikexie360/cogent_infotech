@@ -1,0 +1,41 @@
+<div class="card" style="width: 50rem;">
+    <div class="card-header">
+      <h5 class="card-title">List of Users</h5>
+    </div>
+    <div class="card-body">
+
+        <table class="table table-stripped">
+            <thead>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>SALARY</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users" #user>
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.salary | currency}}</td>
+                    <td><button (click)="editUser(user)" class="btn btn-primary float-end btn btn-success">Edit</button>
+                        <form *ngIf="showForm" novalidate #userform="ngForm">
+                            <label class="form-label">Name: </label> 
+                            <input class="form-control" type="text" required #name> <br>
+                            <label >Age: </label> 
+                            <input class="form-control" type="text" required #age><br>
+                            <label >Salary: </label>
+                            <input class="form-control" type="text" required #salary>
+                            <button (click)="onSubmitPost($event, user, name.value, age.value, salary.value)" class="btn btn-primary float-end btn btn-info">Update</button>
+                        </form>
+                    </td>
+                    <td><button (click)="remove($event, user)" class="btn btn-primary float-end btn btn-danger">Remove</button></td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+
+    </div>
+</div>
