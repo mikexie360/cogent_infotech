@@ -1,0 +1,17 @@
+package react.entity;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name ="User")
+public class User {
+
+}

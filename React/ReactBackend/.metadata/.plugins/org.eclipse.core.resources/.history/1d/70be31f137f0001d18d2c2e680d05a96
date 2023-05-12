@@ -1,0 +1,5 @@
+package react.entity;
+
+public class User {
+
+}
